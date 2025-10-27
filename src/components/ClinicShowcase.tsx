@@ -1,6 +1,7 @@
 import clinicImage from "@/assets/clinic-interior-new.jpg";
 import chairsImg from "@/assets/clinic-chairs.jpg";
 import corridorImg from "@/assets/clinic-corridor.jpg";
+import windowImg from "@/assets/clinic-window.jpg";
 
 const ClinicShowcase = () => {
   return (
@@ -46,7 +47,7 @@ const ClinicShowcase = () => {
             
             <div className="relative h-64 rounded-2xl overflow-hidden shadow-soft animate-fade-in group cursor-pointer" style={{ animationDelay: '0.2s' }}>
               <img 
-                src={chairsImg} 
+                src={windowImg} 
                 alt="Serene Modern Environment"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
