@@ -24,7 +24,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <img src={logo} alt="Miracle Regenerative Center" className="h-12 w-auto" />
+            <img src={logo} alt="Miracle Regenerative Center" className="h-16 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -33,7 +33,7 @@ const Navigation = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`font-medium text-[15px] tracking-wide transition-colors ${
+                className={`font-medium text-sm tracking-wide transition-colors ${
                   isActive(item.path)
                     ? "text-primary"
                     : "text-foreground hover:text-primary"
