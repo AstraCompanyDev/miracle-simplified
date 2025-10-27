@@ -35,13 +35,16 @@ const Contact = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-white">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
-            <h1 className="text-5xl md:text-6xl font-semibold font-serif mb-6">
+            <p className="text-primary text-sm font-semibold tracking-wider uppercase mb-3">
+              Get In Touch
+            </p>
+            <h1 className="text-5xl md:text-6xl font-semibold font-serif mb-6 text-foreground">
               Contact Us
             </h1>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-xl text-muted-foreground mb-8">
               Get in touch with our team to start your journey to better health
             </p>
           </div>
