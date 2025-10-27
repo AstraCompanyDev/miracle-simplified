@@ -1,14 +1,14 @@
-import { Heart } from "lucide-react";
+import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
     <footer className="bg-secondary text-white py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center space-y-4">
-          <div className="flex items-center gap-2">
-            <Heart className="h-5 w-5 text-primary fill-primary" />
-            <span className="text-lg font-semibold text-white/95">Miracle Regenerative Center</span>
-          </div>
+          <Link to="/" className="hover:opacity-80 transition-opacity">
+            <img src={logo} alt="Miracle Regenerative Center" className="h-16 w-auto brightness-0 invert" />
+          </Link>
           
           <p className="text-white/75 text-center text-sm max-w-md">
             Leading stem cell clinic in Bangkok offering regenerative therapies and personalized care for a healthier future.
