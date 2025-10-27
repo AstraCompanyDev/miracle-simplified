@@ -1,43 +1,34 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import ivTherapyImg from "@/assets/lifestyle-iv.jpg";
 import stemCellImg from "@/assets/stem-cell-therapy.jpg";
-import ivTherapyImg from "@/assets/iv-therapy.jpg";
-import immunotherapyImg from "@/assets/immunotherapy.jpg";
-import jointTherapyImg from "@/assets/joint-therapy.jpg";
-import antiAgingImg from "@/assets/anti-aging.jpg";
-import performanceImg from "@/assets/performance-therapy.jpg";
+import skinImg from "@/assets/lifestyle-facial.jpg";
+import checkupImg from "@/assets/lifestyle-checkup.jpg";
 
 const SignatureTreatments = () => {
   const treatments = [
     {
-      title: "Stem Cell Therapy",
-      description: "Cutting-edge regenerative medicine for cellular renewal and tissue repair",
-      image: stemCellImg,
-    },
-    {
       title: "IV Therapy",
       description: "Hydration and nutrient support for energy, recovery and immunity",
       image: ivTherapyImg,
+      cta: "VIEW ALL IV DRIP",
     },
     {
-      title: "Immunotherapy",
-      description: "Advanced immune system enhancement for optimal health and vitality",
-      image: immunotherapyImg,
+      title: "Stem Cell Therapy",
+      description: "Cutting-edge regenerative medicine for skin, joints, and energy optimization",
+      image: stemCellImg,
+      cta: "VIEW CELL THERAPIES",
     },
     {
-      title: "Joint & Cartilage Treatment",
-      description: "Regenerative solutions for joint pain, osteoarthritis, and mobility",
-      image: jointTherapyImg,
+      title: "Skin Rejuvenation",
+      description: "Modern aesthetics using Botox, Pico Laser, and anti-aging facials",
+      image: skinImg,
+      cta: "VIEW SKIN TREATMENTS",
     },
     {
-      title: "Anti-Aging Therapy",
-      description: "Cellular rejuvenation for youthful vitality and longevity",
-      image: antiAgingImg,
-    },
-    {
-      title: "Performance Enhancement",
-      description: "Specialized treatments for optimal physical and metabolic health",
-      image: performanceImg,
+      title: "Health Check-Up",
+      description: "Routine Medical Screening & Prevention",
+      image: checkupImg,
+      cta: "VIEW HEALTH CHECK-UP",
     },
   ];
 
@@ -58,36 +49,45 @@ const SignatureTreatments = () => {
             </p>
           </div>
 
-          {/* Treatments Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Treatments Grid - Arched Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {treatments.map((treatment, index) => (
-              <Card 
+              <div 
                 key={index}
-                className="group overflow-hidden border-0 shadow-soft hover:shadow-hover transition-all duration-500 hover:-translate-y-2 bg-gradient-card animate-fade-in cursor-pointer"
+                className="group relative overflow-hidden rounded-t-[200px] h-[450px] shadow-soft hover:shadow-hover transition-all duration-500 hover:-translate-y-2 animate-fade-in cursor-pointer"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="relative h-64 overflow-hidden">
+                {/* Background Image */}
+                <div className="absolute inset-0">
                   <img 
                     src={treatment.image} 
                     alt={treatment.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-overlay" />
                 </div>
                 
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-3 font-['Playfair_Display'] group-hover:text-primary transition-colors">
-                    {treatment.title}
-                  </h3>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    {treatment.description}
-                  </p>
-                  <div className="flex items-center text-primary font-semibold text-sm group-hover:gap-2 transition-all">
-                    Learn More
-                    <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                {/* Content */}
+                <div className="relative h-full flex flex-col justify-between p-8 text-white">
+                  <div className="flex-1 flex flex-col justify-center items-center text-center">
+                    <p className="text-sm mb-4 opacity-90 leading-relaxed">
+                      {treatment.description}
+                    </p>
+                    <h3 className="text-3xl font-bold font-['Playfair_Display'] mb-6">
+                      {treatment.title}
+                    </h3>
                   </div>
-                </CardContent>
-              </Card>
+                  
+                  <div className="flex justify-center">
+                    <Button 
+                      variant="secondary"
+                      className="bg-white text-foreground hover:bg-white/90 font-semibold px-8 rounded-full"
+                    >
+                      {treatment.cta}
+                    </Button>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
