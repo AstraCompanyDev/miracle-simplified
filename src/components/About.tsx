@@ -25,7 +25,7 @@ const About = () => {
           </div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
               <div 
                 key={index}
@@ -39,16 +39,6 @@ const About = () => {
                 <div className="text-muted-foreground font-medium">{stat.label}</div>
               </div>
             ))}
-          </div>
-
-          {/* Description */}
-          <div className="bg-gradient-card rounded-2xl p-10 md:p-12 shadow-soft">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Our team of experienced professionals is dedicated to building your healthier future. Situated in the dynamic hub of Bangkok, the clinic offers a serene and modern environment, reflecting our commitment to promoting well-being.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Quality and safety are at the forefront of everything we do, dedicated to providing services that not only meet but exceed industry standards. Our expertise lies in delivering cutting-edge solutions that harness the regenerative capabilities of Stem Cell Science.
-            </p>
           </div>
         </div>
       </div>
