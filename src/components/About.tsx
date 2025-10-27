@@ -2,9 +2,9 @@ import { Sparkles, Heart, Award } from "lucide-react";
 
 const About = () => {
   const stats = [
-    { icon: Award, value: "2+", label: "Years of Experience" },
-    { icon: Heart, value: "1,021+", label: "Patients Treated" },
-    { icon: Sparkles, value: "21", label: "Studies Conducted" },
+    { icon: Award, value: "14", label: "Years of Experience" },
+    { icon: Heart, value: "5,800", label: "Patients Treated" },
+    { icon: Sparkles, value: "124", label: "Studies Conducted" },
   ];
 
   return (

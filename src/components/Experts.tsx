@@ -18,7 +18,7 @@ const Experts = () => {
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-2xl shadow-hover">
-                <div className="text-3xl font-semibold">94%</div>
+                <div className="text-3xl font-semibold">85%</div>
                 <div className="text-sm font-normal">Success Rate</div>
               </div>
             </div>
