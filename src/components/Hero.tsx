@@ -20,13 +20,13 @@ const Hero = () => {
             Bangkok's Premier Regenerative Medicine Center
           </p>
           
-          <h1 className="text-5xl md:text-7xl font-bold font-['Playfair_Display'] leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold font-serif leading-tight text-white/95">
             Your Personalized
             <br />
             <span className="text-primary">Regenerative Solution</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-white/85 max-w-2xl mx-auto">
             With regenerative therapies, our expert team revitalizes your body for a healthier future
           </p>
 
@@ -52,7 +52,7 @@ const Hero = () => {
             </Button>
           </div>
 
-          <p className="text-sm text-white/70 pt-4">
+          <p className="text-sm text-white/65 pt-4">
             Business Hours: 9:00 AM - 5:00 PM (Monday to Saturday)
           </p>
         </div>
