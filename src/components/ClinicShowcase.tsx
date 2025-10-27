@@ -1,4 +1,4 @@
-import clinicImage from "@/assets/clinic-interior.jpg";
+import clinicImage from "@/assets/clinic-interior-new.jpg";
 
 const ClinicShowcase = () => {
   return (
