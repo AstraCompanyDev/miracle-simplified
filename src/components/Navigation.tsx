@@ -67,7 +67,7 @@ const Navigation = () => {
             <Button
               variant="secondary"
               className="gap-2"
-              onClick={() => window.open('tel:+6681734202', '_blank')}
+              onClick={() => window.open('tel:+66817342027', '_blank')}
             >
               <Phone className="h-4 w-4" />
               Call Now
@@ -75,7 +75,7 @@ const Navigation = () => {
             <Button
               variant="whatsapp"
               className="gap-2"
-              onClick={() => window.open('https://wa.me/6681734202', '_blank')}
+              onClick={() => window.open('https://wa.me/66817342027', '_blank')}
             >
               <MessageCircle className="h-4 w-4" />
               Chat on WhatsApp
@@ -137,7 +137,7 @@ const Navigation = () => {
               className="w-full mt-4 gap-2"
               onClick={() => {
                 setIsOpen(false);
-                window.open('tel:+6681734202', '_blank');
+                window.open('tel:+66817342027', '_blank');
               }}
             >
               <Phone className="h-4 w-4" />
@@ -148,7 +148,7 @@ const Navigation = () => {
               className="w-full mt-2 gap-2"
               onClick={() => {
                 setIsOpen(false);
-                window.open('https://wa.me/6681734202', '_blank');
+                window.open('https://wa.me/66817342027', '_blank');
               }}
             >
               <MessageCircle className="h-4 w-4" />

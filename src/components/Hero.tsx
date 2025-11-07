@@ -35,7 +35,7 @@ const Hero = () => {
               variant="whatsapp" 
               size="lg"
               className="text-lg gap-3"
-              onClick={() => window.open('https://wa.me/6681734202', '_blank')}
+              onClick={() => window.open('https://wa.me/66817342027', '_blank')}
             >
               <MessageCircle className="h-6 w-6" />
               Chat on WhatsApp
@@ -45,7 +45,7 @@ const Hero = () => {
               variant="secondary" 
               size="lg"
               className="text-lg gap-3"
-              onClick={() => window.open('tel:+6681734202', '_blank')}
+              onClick={() => window.open('tel:+66817342027', '_blank')}
             >
               <Phone className="h-5 w-5" />
               +66 81-734-2027

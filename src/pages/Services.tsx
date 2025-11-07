@@ -140,7 +140,7 @@ const Services = () => {
               variant="whatsapp"
               size="lg"
               className="gap-2"
-              onClick={() => window.open('https://wa.me/6681734202', '_blank')}
+              onClick={() => window.open('https://wa.me/66817342027', '_blank')}
             >
               <MessageCircle className="h-5 w-5" />
               Chat on WhatsApp

@@ -28,7 +28,7 @@ const Contact = () => {
             <div className="bg-white rounded-2xl p-6 hover:bg-accent/50 transition-all duration-300 animate-fade-in shadow-soft" style={{ animationDelay: '0.1s' }}>
               <Phone className="h-8 w-8 mx-auto mb-4 text-primary" />
               <h3 className="font-semibold text-lg mb-2 text-foreground">Phone</h3>
-              <a href="tel:+6681734202" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:+66817342027" className="text-muted-foreground hover:text-primary transition-colors">
                 +66 81-734-2027
               </a>
             </div>
@@ -47,7 +47,7 @@ const Contact = () => {
               variant="whatsapp"
               size="lg"
               className="text-lg gap-3"
-              onClick={() => window.open('https://wa.me/6681734202', '_blank')}
+              onClick={() => window.open('https://wa.me/66817342027', '_blank')}
             >
               <MessageCircle className="h-6 w-6" />
               Chat on WhatsApp Now
@@ -57,7 +57,7 @@ const Contact = () => {
               variant="secondary"
               size="lg"
               className="text-lg gap-3"
-              onClick={() => window.open('tel:+6681734202', '_blank')}
+              onClick={() => window.open('tel:+66817342027', '_blank')}
             >
               <Phone className="h-5 w-5" />
               Call Us Today

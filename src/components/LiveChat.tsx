@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const LiveChat = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const whatsappNumber = "6681734202";
+  const whatsappNumber = "66817342027";
   const whatsappMessage = "Hi! I'd like to learn more about your regenerative medicine services.";
 
   const openWhatsApp = () => {

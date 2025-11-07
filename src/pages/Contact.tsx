@@ -15,7 +15,7 @@ const Contact = () => {
       icon: Phone,
       title: "Phone",
       details: ["+66 81-734-2027"],
-      link: "tel:+6681734202",
+      link: "tel:+66817342027",
     },
     {
       icon: Mail,
@@ -160,7 +160,7 @@ const Contact = () => {
                     variant="whatsapp"
                     size="lg"
                     className="w-full gap-2"
-                    onClick={() => window.open('https://wa.me/6681734202', '_blank')}
+                    onClick={() => window.open('https://wa.me/66817342027', '_blank')}
                   >
                     <MessageCircle className="h-5 w-5" />
                     Chat on WhatsApp
@@ -176,7 +176,7 @@ const Contact = () => {
                     variant="secondary"
                     size="lg"
                     className="w-full gap-2"
-                    onClick={() => window.open('tel:+6681734202', '_blank')}
+                    onClick={() => window.open('tel:+66817342027', '_blank')}
                   >
                     <Phone className="h-5 w-5" />
                     +66 81-734-2027
