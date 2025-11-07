@@ -18,7 +18,7 @@ const ClinicShowcase = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center p-8">
               <h2 className="text-4xl md:text-6xl font-serif font-semibold mb-4 drop-shadow-lg">
-                Your Journey to Wellness & Longevity
+                Your Journey to <span className="text-accent">Wellness</span> & <span className="text-accent">Longevity</span>
               </h2>
               <p className="text-xl md:text-2xl text-white/90 max-w-3xl drop-shadow-md">
                 Guiding you through advanced regenerative medicine in the heart of Bangkok
@@ -36,8 +36,8 @@ const ClinicShowcase = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center p-6">
-                <div className="text-4xl font-semibold mb-2">Bangkok</div>
-                <div className="text-white/90">Heart of the City</div>
+                <div className="text-4xl font-semibold mb-2">Prime Location</div>
+                <div className="text-white/90">Central Bangkok Excellence</div>
               </div>
             </div>
             
@@ -49,8 +49,8 @@ const ClinicShowcase = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center p-6">
-                <div className="text-4xl font-semibold mb-2">Advanced</div>
-                <div className="text-white/90">Technology & Facilities</div>
+                <div className="text-4xl font-semibold mb-2">World-Class</div>
+                <div className="text-white/90">Cutting-Edge Technology</div>
               </div>
             </div>
             
@@ -62,8 +62,8 @@ const ClinicShowcase = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
               <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center p-6">
-                <div className="text-4xl font-semibold mb-2">Serene</div>
-                <div className="text-white/90">Modern Environment</div>
+                <div className="text-4xl font-semibold mb-2">Luxury Care</div>
+                <div className="text-white/90">Exclusive Wellness Experience</div>
               </div>
             </div>
           </div>
