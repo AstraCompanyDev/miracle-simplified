@@ -1,4 +1,4 @@
-import clinicImage from "@/assets/clinic-interior-new.jpg";
+import clinicImage from "@/assets/clinic-main-showcase.jpg";
 import bangkokImg from "@/assets/bangkok-clinic.jpg";
 import advancedImg from "@/assets/advanced-clinic.jpg";
 import sereneImg from "@/assets/serene-clinic.jpg";
