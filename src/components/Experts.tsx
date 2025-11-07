@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import teamImage from "@/assets/team-experts.jpg";
+import teamImage from "@/assets/team-experts-updated.jpg";
 
 const Experts = () => {
   return (
