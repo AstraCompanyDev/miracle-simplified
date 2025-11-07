@@ -1,5 +1,5 @@
 import { Sparkles, Shield, Users, Award } from "lucide-react";
-import activeImage from "@/assets/lifestyle-active.jpg";
+import activeImage from "@/assets/team-experts-new.jpg";
 
 const WhyChooseUs = () => {
   const benefits = [
