@@ -4,11 +4,11 @@ import { Play } from "lucide-react";
 const VideoTestimonials = () => {
   const videos = [
     {
-      title: "Lucy's Journey with Cellular Therapy",
+      title: "Frankie's Regenerative Medicine Journey",
       thumbnail: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual video
-      patient: "Lucy K.",
-      treatment: "Cellular Therapy",
+      embedUrl: "https://www.youtube.com/embed/qPq-Wex7FgA",
+      patient: "Frankie",
+      treatment: "Regenerative Medicine",
     },
     {
       title: "Mark's Hip Recovery Story",
