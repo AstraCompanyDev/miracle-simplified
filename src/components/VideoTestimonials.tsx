@@ -3,6 +3,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Play } from "lucide-react";
 import { useState } from "react";
 import frankieThumb from "@/assets/frankie-testimonial.jpg";
+import mykaThumb from "@/assets/myka-testimonial.jpg";
 
 const VideoTestimonials = () => {
   const [openVideo, setOpenVideo] = useState<string | null>(null);
@@ -17,11 +18,12 @@ const VideoTestimonials = () => {
       treatment: "Regenerative Medicine",
     },
     {
-      title: "Mark's Hip Recovery Story",
-      thumbnail: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
-      embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual video
-      patient: "Mark T.",
-      treatment: "Immunotherapy",
+      title: "Myka's Treatment Journey",
+      thumbnail: mykaThumb,
+      embedUrl: "https://www.youtube.com/embed/L7oXaqRbIWw",
+      videoId: "L7oXaqRbIWw",
+      patient: "Myka",
+      treatment: "Regenerative Medicine",
     },
     {
       title: "Anjali's Diabetes Treatment",
