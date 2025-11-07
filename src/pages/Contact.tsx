@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ContactMap from "@/components/ContactMap";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Clock, Mail, MessageCircle } from "lucide-react";
@@ -195,9 +196,7 @@ const Contact = () => {
             <h2 className="text-3xl font-semibold font-serif text-center mb-8">
               Visit Our Clinic
             </h2>
-            <div className="bg-muted rounded-2xl overflow-hidden shadow-soft h-96 flex items-center justify-center">
-              <p className="text-muted-foreground">Map Integration Area</p>
-            </div>
+            <ContactMap />
           </div>
         </div>
       </section>
