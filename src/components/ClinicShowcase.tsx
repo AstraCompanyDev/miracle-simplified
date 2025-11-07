@@ -9,12 +9,21 @@ const ClinicShowcase = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Image Showcase */}
-          <div className="rounded-3xl overflow-hidden shadow-hover animate-fade-in">
+          <div className="relative rounded-3xl overflow-hidden shadow-hover animate-fade-in">
             <img 
               src={clinicImage} 
               alt="Miracle Regenerative Center Interior"
               className="w-full h-[500px] object-cover"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center p-8">
+              <h2 className="text-4xl md:text-6xl font-serif font-semibold mb-4 drop-shadow-lg">
+                Your Journey to Wellness & Longevity
+              </h2>
+              <p className="text-xl md:text-2xl text-white/90 max-w-3xl drop-shadow-md">
+                Guiding you through advanced regenerative medicine in the heart of Bangkok
+              </p>
+            </div>
           </div>
 
           {/* Info Grid */}
