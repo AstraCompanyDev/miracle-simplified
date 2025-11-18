@@ -12,7 +12,7 @@ const Footer = () => {
           </Link>
           
           <p className="text-white/75 text-center text-sm max-w-md">
-            Leading cellular therapy clinic in Bangkok offering regenerative therapies and personalized care for a healthier future.
+            Specialized cellular therapy clinic in Bangkok offering regenerative therapies and personalized care for a healthier future.
           </p>
           
           <div className="flex gap-4 mb-2">
