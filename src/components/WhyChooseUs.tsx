@@ -11,7 +11,7 @@ const WhyChooseUs = () => {
     {
       icon: Shield,
       title: "Safety First",
-      description: "Industry-leading quality and safety standards",
+      description: "High quality and safety standards",
     },
     {
       icon: Users,
