@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, MessageCircle, Instagram, Facebook, Phone } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/MiracleLogo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +45,7 @@ const Navigation = () => {
           {/* Social Icons & CTA */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/miracleregen"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground hover:text-primary transition-colors"
@@ -54,7 +54,7 @@ const Navigation = () => {
               <Instagram className="h-5 w-5" />
             </a>
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/p/Miracle-Regenerative-61575804023437/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground hover:text-primary transition-colors"

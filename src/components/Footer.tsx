@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Instagram, Facebook } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/MiracleLogo.png";
 
 const Footer = () => {
   return (
@@ -17,7 +17,7 @@ const Footer = () => {
           
           <div className="flex gap-4 mb-2">
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/miracleregen"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/75 hover:text-white transition-colors"
@@ -26,7 +26,7 @@ const Footer = () => {
               <Instagram className="h-6 w-6" />
             </a>
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/p/Miracle-Regenerative-61575804023437/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/75 hover:text-white transition-colors"

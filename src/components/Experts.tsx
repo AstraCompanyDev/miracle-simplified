@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import teamImage from "@/assets/team-experts-updated.jpg";
+import { Link } from "react-router-dom";
 
 const Experts = () => {
   return (
@@ -37,10 +38,12 @@ const Experts = () => {
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                 We bring a wealth of knowledge to the table, ensuring that our patients receive the highest standard of care. Our expertise lies in delivering cutting-edge solutions that meet the highest standards of quality and safety.
               </p>
-              <Button variant="default" size="lg" className="gap-2">
-                Discover More
-                <ArrowRight className="h-5 w-5" />
-              </Button>
+              <Link to={'/contact'}>
+                <Button variant="default" size="lg" className="gap-2">
+                  Discover More
+                  <ArrowRight className="h-5 w-5" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
