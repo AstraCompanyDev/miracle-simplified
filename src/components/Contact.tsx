@@ -21,8 +21,8 @@ const Contact = () => {
             <div className="bg-white rounded-2xl p-6 hover:bg-accent/50 transition-all duration-300 animate-fade-in shadow-soft">
               <MapPin className="h-8 w-8 mx-auto mb-4 text-primary" />
               <h3 className="font-semibold text-lg mb-2 text-foreground">Location</h3>
-              <p className="text-muted-foreground">Heart of Bangkok</p>
-              <p className="text-muted-foreground">Thailand</p>
+              <p className="text-muted-foreground">Bangkok Mediplex</p>
+              <p className="text-muted-foreground">Soi Sukhumvit 42, Bangkok</p>
             </div>
 
             <div className="bg-white rounded-2xl p-6 hover:bg-accent/50 transition-all duration-300 animate-fade-in shadow-soft" style={{ animationDelay: '0.1s' }}>

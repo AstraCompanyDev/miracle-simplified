@@ -17,10 +17,10 @@ const About = () => {
               About Us
             </p>
             <h2 className="text-4xl md:text-5xl font-semibold font-serif text-foreground mb-6">
-              Leading Stem Cell Clinic in the Heart of Bangkok
+              Advanced Regenerative Medicine in Bangkok
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Located in the heart of Bangkok, where innovation meets personalized care, the Miracle Regenerative clinic is equipped with the latest advancements in stem cell technology.
+              Located at Bangkok Mediplex, Soi Sukhumvit 42, Bangkok, where innovation meets personalized care, the Miracle Regenerative clinic is equipped with the latest advancements in cellular therapy.
             </p>
           </div>
 

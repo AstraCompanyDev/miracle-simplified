@@ -6,7 +6,7 @@ const WhyChooseUs = () => {
     {
       icon: Sparkles,
       title: "Cutting-Edge Technology",
-      description: "Latest advancements in stem cell and regenerative medicine",
+      description: "Latest advancements in cellular therapy and regenerative medicine",
     },
     {
       icon: Shield,
@@ -36,10 +36,10 @@ const WhyChooseUs = () => {
                 What We Do
               </p>
               <h2 className="text-4xl md:text-5xl font-semibold font-serif text-foreground mb-6">
-                Empower Your Tomorrow: Lifelong Vitality with Stem Cell Science
+                Empower Your Tomorrow: Lifelong Vitality with Cellular Therapy
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Our expertise lies in delivering cutting-edge solutions that meet the highest standards of quality and safety. Embrace the future of longevity by harnessing the regenerative capabilities of Stem Cell Science.
+                Our expertise lies in delivering cutting-edge solutions that meet the highest standards of quality and safety. Embrace the future of longevity by harnessing the regenerative capabilities of Cellular Therapy.
               </p>
 
               {/* Benefits Grid */}
