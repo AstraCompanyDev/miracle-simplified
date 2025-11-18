@@ -32,7 +32,7 @@ const ContactMap = () => {
         .setLngLat(clinicCoordinates)
         .setPopup(
           new mapboxgl.Popup({ offset: 25 })
-            .setHTML('<h3 class="font-semibold">Miracle Regenerative Center</h3><p>Heart of Bangkok, Thailand</p>')
+            .setHTML('<h3 class="font-semibold">Miracle Regenerative Clinic</h3><p>Bangkok Mediplex, Soi Sukhumvit 42, Bangkok</p>')
         )
         .addTo(map.current);
 

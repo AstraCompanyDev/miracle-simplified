@@ -8,11 +8,11 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center space-y-4">
           <Link to="/" className="hover:opacity-80 transition-opacity">
-            <img src={logo} alt="Miracle Regenerative Center" className="h-16 w-auto brightness-0 invert" />
+            <img src={logo} alt="Miracle Regenerative Clinic" className="h-16 w-auto brightness-0 invert" />
           </Link>
           
           <p className="text-white/75 text-center text-sm max-w-md">
-            Leading stem cell clinic in Bangkok offering regenerative therapies and personalized care for a healthier future.
+            Leading cellular therapy clinic in Bangkok offering regenerative therapies and personalized care for a healthier future.
           </p>
           
           <div className="flex gap-4 mb-2">
@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
           
           <div className="border-t border-white/15 w-full max-w-md pt-4 text-center text-xs text-white/60">
-            © {new Date().getFullYear()} Miracle Regenerative Center. All rights reserved.
+            © {new Date().getFullYear()} Miracle Regenerative Clinic. All rights reserved.
           </div>
         </div>
       </div>

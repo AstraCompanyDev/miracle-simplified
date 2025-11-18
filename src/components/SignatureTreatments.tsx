@@ -14,7 +14,7 @@ const SignatureTreatments = () => {
       cta: "VIEW ALL IV DRIP",
     },
     {
-      title: "Stem Cell Therapy",
+      title: "Cellular Therapy",
       description: "Cutting-edge regenerative medicine for skin, joints, and energy optimization",
       image: stemCellImg,
       cta: "VIEW CELL THERAPIES",
