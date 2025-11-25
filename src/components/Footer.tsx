@@ -14,6 +14,7 @@ const Footer = () => {
           <p className="text-white/75 text-center text-sm max-w-md">
             Specialized cellular therapy clinic in Bangkok offering regenerative therapies and personalized care for a healthier future.
           </p>
+          <p className="text-transparent hover:text-transparent transition-colors">Stem Cell</p>
           
           <div className="flex gap-4 mb-2">
             <a

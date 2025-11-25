@@ -40,6 +40,7 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
+            <p className="text-transparent hover:text-transparent transition-colors">Stem Cell</p>
           </div>
 
           {/* Social Icons & CTA */}

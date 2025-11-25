@@ -2,7 +2,7 @@ import { Sparkles, Heart, Award } from "lucide-react";
 
 const About = () => {
   const stats = [
-    { icon: Award, value: "14", label: "Years of Experience" },
+    // { icon: Award, value: "14", label: "Years of Experience" },
     { icon: Heart, value: "5,800", label: "Patients Treated" },
     { icon: Sparkles, value: "124", label: "Studies Conducted" },
   ];
@@ -25,7 +25,7 @@ const About = () => {
           </div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {stats.map((stat, index) => (
               <div 
                 key={index}
