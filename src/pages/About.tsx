@@ -6,6 +6,7 @@ import ClinicShowcase from "@/components/ClinicShowcase";
 import { Award, Heart, Sparkles } from "lucide-react";
 
 const About = () => {
+
   const stats = [
     // { icon: Award, value: "14", label: "Years of Experience" },
     { icon: Heart, value: "5,800", label: "Patients Treated" },
