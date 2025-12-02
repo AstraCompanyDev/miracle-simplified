@@ -11,6 +11,8 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import RouteTracker from "./components/RouteTracker";
 import Landing from "./pages/Landing";
+import Blog from "./pages/Blog";
+import BlogDetail from "./components/BlogDetail";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +27,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/lee" element={<Landing />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

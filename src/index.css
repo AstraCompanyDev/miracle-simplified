@@ -66,3 +66,60 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+
+
+/* Give all Gutenberg blocks space */
+h2.wp-block-heading {
+  font-size: 1.5rem;
+}
+h3.wp-block-heading {
+  font-size: 1.25rem;
+}
+.wp-block-heading {
+  margin-top: 2rem;
+  margin-bottom: 1rem;  
+}
+
+.wp-block-image {
+  margin: 2rem 0;
+}
+
+.wp-block-image img {
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+}
+
+.wp-block-list {
+  margin: 1.5rem 0;
+  margin-left: 1.8rem;
+}
+
+.wp-block-quote {
+  margin: 2rem 0;
+  padding-left: 1.2rem;
+  border-left: 4px solid #ccc;
+  font-style: italic;
+}
+
+.wp-block-table {
+  margin: 2rem 0;
+}
+
+.wp-block-columns {
+  margin: 2rem 0;
+  gap: 1.5rem;
+}
+
+/* Make tables more readable */
+.wp-block-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.wp-block-table th,
+.wp-block-table td {
+  border: 1px solid #e5e7eb;
+  padding: 12px;
+}
