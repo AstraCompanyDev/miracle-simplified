@@ -120,7 +120,7 @@ const Blog = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {filteredPosts.map((post, index) => {
                 // ✅ FIX: Get image from multiple sources
                 const featuredImage = 
@@ -136,7 +136,7 @@ const Blog = () => {
                   <Link to={`/blog/${post.slug}`} key={post.id}>
                     <Card
                       key={post.id}
-                      className="group overflow-hidden border-0 shadow-soft hover:shadow-hover transition-all duration-300 hover:-translate-y-2 cursor-pointer animate-fade-in"
+                      className="group h-full flex flex-col overflow-hidden border-0 shadow-soft hover:shadow-hover transition-all duration-300 hover:-translate-y-2 cursor-pointer animate-fade-in"
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
                       <div className="relative aspect-[560/288] overflow-hidden">

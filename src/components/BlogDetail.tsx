@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Calendar, Clock, ArrowLeft } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, MessageCircle } from "lucide-react";
+import { Button } from "./ui/button";
+import RecentPostsCarousel from "./RecentPostsCarousel";
 
 const WP_API = "https://miracleregen.com/wp-json/wp/v2";
 
@@ -93,8 +95,7 @@ const BlogDetail = () => {
                 {new Date(post.date).toLocaleDateString()}
               </div>
               <div className="flex items-center gap-1">
-                <Clock className="w-4 h-4" />
-                5 min read
+                <Clock className="w-4 h-4" />5 min read
               </div>
             </div>
 
@@ -118,12 +119,44 @@ const BlogDetail = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto prose prose-lg prose-headings:font-serif prose-headings:text-3xl prose-img:rounded-xl prose-img:shadow-soft">
-            <div
-              dangerouslySetInnerHTML={{ __html: post.content.rendered }}
-            />
+            <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
           </div>
         </div>
       </section>
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-8 animate-fade-in-up">
+              <h2 className="text-3xl md:text-4xl font-semibold font-serif text-foreground mb-6">
+                Ready to Start Your Journey?
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Connect with our team for a consultation and explore service
+                options designed to support your overall wellbeing.
+              </p>
+            </div>
+            <div className="text-center">
+              <Button
+                variant="whatsapp"
+                size="lg"
+                className="text-lg gap-3"
+                onClick={() =>
+                  window.open("https://wa.me/66817342027", "_blank")
+                }
+              >
+                <MessageCircle className="h-6 w-6" />
+                Schedule a Consultation
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Recent Posts Carousel */}
+      <h2 className="text-3xl md:text-4xl font-serif font-semibold text-center">
+        Continue Reading
+      </h2>
+      <RecentPostsCarousel currentPostSlug={slug} />
 
       <Footer />
     </div>
