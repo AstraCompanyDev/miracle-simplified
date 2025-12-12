@@ -1,4 +1,8 @@
 import { UserSearch, ClipboardList, Sparkles, HeartPulse} from "lucide-react";
+import TharapyIcon from '@/assets/cell-tharapy.png';
+import IVNutrientIcon from '@/assets/IV-Nutrient-support.png';
+import WellBeingIcon from '@/assets/well-being.png';
+import PainManagementIcon from '@/assets/pain-management.png';
 
 const OurServices = () => {
   return (
@@ -17,25 +21,25 @@ const OurServices = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 { 
-                  iconPath: '/src/assets/cell-tharapy.png',
+                  iconPath: TharapyIcon,
                   title: "Cell Therapies", 
                   desc: "Comprehensive health assessment and medical history review",
                   color: "text-primary"
                 },
                 { 
-                  iconPath: '/src/assets/IV-Nutrient-support.png', 
+                  iconPath: IVNutrientIcon, 
                   title: "IV Nutrient Support", 
                   desc: "Personalized treatment protocol designed for your unique needs",
                   color: "text-primary"
                 },
                 { 
-                  iconPath: '/src/assets/well-being.png', 
+                  iconPath: WellBeingIcon, 
                   title: "Well-Being", 
                   desc: "Professional care delivery in our state-of-the-art facility",
                   color: "text-primary"
                 },
                 { 
-                  iconPath: '/src/assets/pain-management.png', 
+                  iconPath: PainManagementIcon, 
                   title: "Pain Management", 
                   desc: "Ongoing support, monitoring and progress optimization",
                   color: "text-primary"
