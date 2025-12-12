@@ -8,7 +8,7 @@ interface RecentPostsCarouselProps {
   currentPostSlug: string;
 }
 
-const RecentPostsCarousel = ({ currentPostSlug }: RecentPostsCarouselProps) => {
+const RecentPostsCarousel = ({ currentPostSlug,  }: RecentPostsCarouselProps) => {
   const [recentPosts, setRecentPosts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -74,7 +74,7 @@ const RecentPostsCarousel = ({ currentPostSlug }: RecentPostsCarouselProps) => {
   if (loading || !recentPosts.length) return null;
 
   return (
-    <section className="py-8 bg-muted/20">
+    <section className="py-8 ">
       <div className="container mx-auto px-4">
         {/* Main carousel container with hover group */}
         <div className="relative group/carousel">

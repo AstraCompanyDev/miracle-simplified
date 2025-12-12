@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Clock, Mail, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import ContactForm from "@/components/ContactForm";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const contactInfo = [
@@ -13,6 +14,7 @@ const Contact = () => {
       icon: MapPin,
       title: "Location",
       details: ["Heart of Bangkok", "Thailand"],
+      link: "#map-section",
     },
     {
       icon: Phone,
@@ -119,8 +121,18 @@ const Contact = () => {
               {contactInfo.map((info, index) => (
                 <Card
                   key={index}
-                  className="border-0 shadow-soft hover:shadow-hover transition-all duration-300 animate-fade-in"
+                  className="border-0 shadow-soft hover:shadow-hover transition-all duration-300 animate-fade-in cursor-pointer"
                   style={{ animationDelay: `${index * 0.1}s` }}
+                  onClick={() => {
+                    if(info.link) {
+                      if (info.link?.startsWith("#")) {
+                      const el = document.querySelector(info.link);
+                      el?.scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      window.location.href = info.link;
+                    }
+                    }
+                  }}
                 >
                   <CardContent className="p-6 text-center">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
@@ -207,7 +219,7 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-muted/30">
+      <section id="map-section" className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-semibold font-serif text-center mb-8">
