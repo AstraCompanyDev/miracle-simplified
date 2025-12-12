@@ -7,25 +7,34 @@ import stemCellImg from "@/assets/stem-cell-therapy.jpg";
 import ivTherapyImg from "@/assets/iv-therapy.jpg";
 import immunotherapyImg from "@/assets/immunotherapy.jpg";
 
+import JointPainImg from "@/assets/joint-pain.webp";
+import CellularTherapyImg from "@/assets/cellular-therapy.webp";
+import IVNutrientImg from "@/assets/IV.webp";
+import { url } from "inspector";
+import { Link } from "react-router-dom";
+
 const Services = () => {
   const services = [
     {
-      icon: Sparkles,
-      title: "Regenerative Medicine",
-      description: "Cutting-edge stem cell therapies and cellular treatments for tissue repair and rejuvenation",
-      image: stemCellImg,
+      // icon: Sparkles,
+      title: "Joint pain Support",
+      description: "Approaches that help ease routine joint discomfort and support comfortable daily movement.",
+      image: JointPainImg,
+      url: "/services/joint-pain-support"
     },
     {
-      icon: Heart,
-      title: "Wellness & IV Therapy",
-      description: "Personalized IV drip treatments for hydration, immunity, energy, and recovery",
-      image: ivTherapyImg,
+      // icon: Heart,
+      title: "Cellular Therapies",
+      description: "Support designed to help maintain vitality and everyday comfort as you age.",
+      image: CellularTherapyImg,
+      url: "/services/cellular-therapy"
     },
     {
-      icon: Shield,
-      title: "Immune Enhancement",
-      description: "Advanced immunotherapy protocols to strengthen your body's natural defense systems",
-      image: immunotherapyImg,
+      // icon: Shield,
+      title: "IV Nutrient Support",
+      description: "Hydration-focused support to help maintain daily energy.",
+      image: IVNutrientImg,
+      url: "/services/iv-nutrient-support"
     },
   ];
 
@@ -53,7 +62,7 @@ const Services = () => {
               Our Services
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Comprehensive regenerative medicine solutions designed to optimize your health and vitality
+              Comprehensive health-support programs designed to enhance your overall balance and vitality.
             </p>
           </div>
         </div>
@@ -65,9 +74,10 @@ const Services = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
+                <Link to={service.url} key={index} className="no-underline">
                 <Card 
                   key={index}
-                  className="overflow-hidden border-0 shadow-soft hover:shadow-hover transition-all duration-300 hover:-translate-y-2 animate-fade-in"
+                  className="h-full overflow-hidden border-0 shadow-soft hover:shadow-hover transition-all duration-300 hover:-translate-y-2 animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="relative h-64 overflow-hidden">
@@ -78,17 +88,21 @@ const Services = () => {
                     />
                   </div>
                   <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                    {/* <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                       <service.icon className="h-6 w-6 text-primary" />
-                    </div>
+                    </div> */}
                     <h3 className="text-2xl font-semibold font-serif mb-3">
                       {service.title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
                       {service.description}
+                      
+                      
                     </p>
+                      <a href="#" className="text-primary underline">Read More</a>
                   </CardContent>
                 </Card>
+                </Link>
               ))}
             </div>
           </div>

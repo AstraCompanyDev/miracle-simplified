@@ -12,7 +12,10 @@ import NotFound from "./pages/NotFound";
 import RouteTracker from "./components/RouteTracker";
 import Landing from "./pages/Landing";
 import Blog from "./pages/Blog";
-import BlogDetail from "./components/BlogDetail";
+import BlogDetail from "./pages/BlogDetail";
+import Services from "./pages/Services";
+import ServiceDetail from "./pages/JointPainService";
+import JoinPainService from "./pages/JointPainService";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +29,11 @@ const App = () => (
         <RouteTracker />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/joint-pain-support" element={<JoinPainService />} />
+          <Route path="/services/cellular-therapy" element={<ServiceDetail />} />
+          <Route path="/services/iv-nutrient-support" element={<ServiceDetail />} />
+          
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogDetail />} />

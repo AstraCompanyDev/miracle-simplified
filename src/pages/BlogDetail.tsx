@@ -3,8 +3,8 @@ import { useParams, Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Calendar, Clock, ArrowLeft, MessageCircle } from "lucide-react";
-import { Button } from "./ui/button";
-import RecentPostsCarousel from "./RecentPostsCarousel";
+import { Button } from "../components/ui/button";
+import RecentPostsCarousel from "../components/RecentPostsCarousel";
 
 const WP_API = "https://miracleregen.com/wp-json/wp/v2";
 
