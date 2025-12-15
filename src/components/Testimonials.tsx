@@ -51,7 +51,7 @@ const Testimonials = () => {
               Hear From Our Patients
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Read verified Google Reviews from real patients who have experienced the transformative power of regenerative medicine.
+              Explore verified Google Reviews to learn how others felt about their visit and overall experience with our services.
             </p>
           </div>
         </div>
