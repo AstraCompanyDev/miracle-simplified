@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Calendar, Clock, ArrowLeft, MessageCircle, Phone, ClipboardList, Sparkles, Activity, Target, Heart, CircleCheckBig, Shield } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, MessageCircle, Phone, ClipboardList, Sparkles, Activity, Target, Heart, CircleCheckBig, Shield, UserSearch } from "lucide-react";
 import { Button } from "../components/ui/button";
 import RecentPostsCarousel from "../components/RecentPostsCarousel";
-import heroImage from "@/assets/joint-pain.webp";
+import heroImage from "@/assets/cellular-therapy.webp";
 import OurProcess from "@/components/OurProcess";
 import { HeartPulse} from "lucide-react";
 
-const JoinPainService = () => {
+const CellularTherapiesService = () => {
   
   const concerns = [
     "Osteoarthritis",
@@ -26,14 +26,12 @@ const JoinPainService = () => {
     "Support smoother recovery with minimal disruption to routine",
   ];
   const eligibilities = [
-    "Experiencing joint discomfort, stiffness, or reduced mobility",
-    "Struggling with knee, hip, elbow, spine or hip tension",
-    "Noticing movement limitations due to daily activity or aging",
-    "Wanting holistic support for arthritis-related symptoms",
-    "Seeking to maintain or restore strength, stability, and balance",
-    "Looking for a natural, non-invasive approach to long-term mobility",
-    "Ready to move with confidence and comfort again"
-
+    "Noticing signs of aging and want to slow the process",
+    "Experiencing declining energy or mental clarity",
+    "Seeking to optimize hormonal and metabolic balance",
+    "Looking for a natural, holistic longevity approach",
+    "Wanting to enhance skin health and appearance",
+    "Ready to age on their own terms with confidence",
   ];
 
   return (
@@ -56,18 +54,16 @@ const JoinPainService = () => {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(251,191,36,0.12)_0%,transparent_60%)]" />
         </div>
 
-        {/* Content */}
+        {/* Hero Content */}
         <div className="relative z-10 container mx-auto px-6 text-center">
           <div className="max-w-4xl mx-auto space-y-8">
             <h1 className="text-5xl md:text-6xl font-semibold font-serif mb-6 text-foreground">
-              Joint Pain Support & Mobility Program
+              Cellular Therapy Support
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              <b>Move</b> Freely. <b>Live</b> Comfortably. <b>Stay</b> Active.
+              The <b>Age</b> Gracefully. <b>Live</b> Vibrantly. <b>Feel</b> Your Best.
               <br />
-              Experience a holistic, mobility-focused approach designed to
-              support your joints, ease everyday discomfort, and help you stay
-              active at every stage of life
+              Experience a regenerative cellular therapy program designed to support longevity, help maintain cell health, and promote overall vitality.
             </p>
 
             {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6"> */}
@@ -102,19 +98,15 @@ const JoinPainService = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8 animate-fade-in-up">
               <h2 className="text-3xl md:text-4xl font-semibold font-serif text-foreground mb-6">
-                Understanding Joint Health & Its Impact
+                Understanding Aging & Its Impact
               </h2>
               <div className="space-y-5 text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 <p>
-                  Joint and musculoskeletal discomfort can interfere with daily
-                  routines — from morning stiffness to limited mobility, reduced
-                  strength, or tension in the knees, back, shoulders, or hips.
+                 Aging is natural, but how you age can be supported. When cellular function declines, you may feel tired, experience low energy, or notice changes in your appearance and vitality.
                 </p>
 
                 <p>
-                  Natural wear-and-tear, posture habits, daily activity, and
-                  aging all play important roles in how your joints feel and
-                  function.
+                  From diminished energy to skin changes, cognitive slowdowns, and metabolic shifts, aging affects every aspect of life. You deserve to feel confident, strong, and vibrant at every stage.
                 </p>
 
                 <p>
@@ -125,17 +117,8 @@ const JoinPainService = () => {
                   >
                     MRC
                   </Link>
-                  , we recognize the close relationship between{" "}
-                  <strong>
-                    movement, independence, and personal confidence
-                  </strong>
+                  , our cellular therapy program supports your body’s natural processes, helping you maintain vitality, balance, and overall well-being from within.
                   .
-                </p>
-
-                <p>
-                  Our joint pain support approach focuses on helping you move
-                  with greater ease so you can feel more in control of your
-                  day-to-day life while maintaining comfort and stability.
                 </p>
               </div>
             </div>
@@ -156,37 +139,49 @@ const JoinPainService = () => {
         </div>
       </section>
 
-      {/* Common Cause of Joint Pain */}
+      {/* Why Early Support Matters */}
       <section className="py-20 bg-background-warm">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-semibold font-serif mb-6">
-                Common Factors That Affect Joint Health
+                Why Early Support Matters
               </h2>
               {/* <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 A personalized approach to your long-term well-being
               </p> */}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
               {[
                 {
-                  icon: Activity,
-                  title: "Arthritis",
-                  desc: "OConditions like osteoarthritis or rheumatoid-related changes can affect joint comfort and mobility.",
+                  icon: CircleCheckBig,
+                  title: "Maintain Cellular Health",
+                  desc: "Starting a cellular therapy program early helps support your cells' natural ability to function efficiently and maintain overall balance.",
                   color: "text-primary",
                 },
                 {
-                  icon: Target,
-                  title: "Injury & Trauma",
-                  desc: "Sports activity, accidents, or repetitive movement may impact joint tissues and cause discomfort.",
+                  icon: CircleCheckBig,
+                  title: "Support Healthy Function",
+                  desc: "Early engagement in a cellular therapy program may help your body function smoothly as you age.",
                   color: "text-primary",
                 },
                 {
-                  icon: Heart,
-                  title: "Age & Natural Degeneration",
-                  desc: "Joint mobility and flexibility can decline over time due to natural wear and aging.",
+                  icon: CircleCheckBig,
+                  title: "Promote Energy & Daily Activity",
+                  desc: "Participating in a cellular therapy program can assist in maintaining everyday energy, mental alertness, and physical activity.",
+                  color: "text-primary",
+                },
+                {
+                  icon: CircleCheckBig,
+                  title: "Enhance Lifestyle Support",
+                  desc: "Healthy habits, nutrition, and movement guidance are often more beneficial when included early in a cellular therapy program.",
+                  color: "text-primary",
+                },
+                {
+                  icon: CircleCheckBig,
+                  title: "Reduce Strain on the Body",
+                  desc: "Early cellular support may help maintain balance across your body systems and support overall wellness.",
                   color: "text-primary",
                 },
               ].map((item, index) => {
@@ -194,14 +189,14 @@ const JoinPainService = () => {
                 return (
                   <div
                     key={index}
-                    className="bg-white rounded-3xl p-6 text-center shadow-soft hover:shadow-hover transition-all duration-300 hover:-translate-y-1 animate-fade-in"
+                    className="flex flex-col justify-start items-start  text-center bg-white rounded-3xl p-6 "
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                    {/* <div className="w-16 h-16 mb-4 bg-primary/10 rounded-full flex items-center justify-center">
                       <Icon className={`w-8 h-8 ${item.color}`} />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                    <p className=" text-muted-foreground text-sm  leading-relaxed">
+                    </div> */}
+                    <h3 className="text-xl text-left font-semibold mb-3">{item.title}</h3>
+                    <p className="text-left text-muted-foreground text-sm  leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
@@ -211,44 +206,44 @@ const JoinPainService = () => {
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-muted/30">
+      
+      {/* Our Approach */}
+      <section className="py-20 bg-background-warm">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-semibold font-serif mb-6">
-                Effective Support for Joint Discomfort
+                Our Approach to Longevity & Vitality
               </h2>
-              <p className="text-lg text-muted-foreground">
-                We combine cutting-edge technology with personalized care
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                We combine cutting-edge health approaches with personalized longevity programs to support healthy aging and overall vitality
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-2 max-w-4xl mx-auto">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
               {[
                 {
-                  icon: Activity,
-                  desc: "Knee",
+                  icon: CircleCheckBig,
+                  title: "Cellular Health Support",
+                  desc: "We offer approaches that help support natural cell processes and contribute to overall well-being.",
                   color: "text-primary",
                 },
                 {
-                  icon: Target,
-                  desc: "Shoulder",
+                  icon: CircleCheckBig,
+                  title: "Personalized Aging Care",
+                  desc: "Each care plan is personalized to your aging journey, health goals, and lifestyle needs.",
                   color: "text-primary",
                 },
                 {
-                  icon: Heart,
-                  desc: "Hip",
+                  icon: CircleCheckBig,
+                  title: "Holistic well-being",
+                  desc: "We consider hormones, nutrition, stress, sleep, and movement as part of a holistic approach to healthy aging.",
                   color: "text-primary",
                 },
                 {
-                  icon: Heart,
-                  desc: "Elbow",
-                  color: "text-primary",
-                },
-                {
-                  icon: Heart,
-                  desc: "Spine",
+                  icon: CircleCheckBig,
+                  title: "Long-Term Support",
+                  desc: "Our focus is on maintaining balance, cellular health, and quality of life over time.",
                   color: "text-primary",
                 },
               ].map((item, index) => {
@@ -256,53 +251,19 @@ const JoinPainService = () => {
                 return (
                   <div
                     key={index}
-                    className="p-6 mb-6 text-center transition-all duration-300 hover:-translate-y-1 animate-fade-in"
+                    className="flex flex-col items-center text-center bg-white rounded-3xl p-6 "
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="w-16 h-16 mx-auto mb-2 bg-primary/10 rounded-full flex items-center justify-center">
+                    <div className="w-16 h-16 mb-4 bg-primary/10 rounded-full flex items-center justify-center">
                       <Icon className={`w-8 h-8 ${item.color}`} />
                     </div>
-
-                    <p className=" text-muted-foreground text-sm  leading-relaxed font-semibold">
+                    <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                    <p className="text-muted-foreground text-sm  leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
                 );
               })}
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-             
-             {/* Concerns  */}
-             <div>
-              <h3 className="text-xl font-semibold mb-4">Common Concerns People Seek Support For</h3>
-              {concerns.map((concern, index) => (
-                <div 
-                  key={index}
-                  className="flex items-start gap-4  p-2 animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <CircleCheckBig className="w-4 h-4 mt-1" />
-                  <p className="text-foreground font-medium">{concern}</p>
-                </div>
-              ))}
-              </div>
-             
-             {/* Benefits */}
-             <div>
-              <h3 className="text-xl font-semibold mb-4">Benefits of Joint Pain Support</h3>
-              {benefits.map((benefit, index) => (
-                <div 
-                  key={index}
-                  className="flex items-start gap-4  p-2 animate-fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <CircleCheckBig className="w-4 h-4 mt-1" />
-                  <p className="text-foreground font-medium">{benefit}</p>
-                </div>
-              ))}
-             </div>
-            
             </div>
           </div>
         </div>
@@ -317,7 +278,7 @@ const JoinPainService = () => {
                 Who This Program Is For
               </h2>
               <p className="text-lg text-muted-foreground">
-                Our joint support program is designed for individuals who are:
+                Our cellular therapy program is designed for individuals who are:
               </p>
             </div>
 
@@ -346,10 +307,10 @@ const JoinPainService = () => {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-semibold font-serif mb-6">
-                How We Provide Joint Pain Support
+                How We Can Support
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Our comprehensive mobility-support approach helps you maintain an active, comfortable lifestyle:
+                Our comprehensive cellular therapy program helps support:
               </p>
             </div>
 
@@ -357,26 +318,26 @@ const JoinPainService = () => {
               {[
                 {
                   icon: Activity,
-                  title: "Improved Joint Comfort",
-                  desc: "Support reduces tension, stiffness, and everyday joint discomfort.",
+                  title: "Youthful Energy",
+                  desc: "Experience sustained vitality, mental clarity, and physical stamina throughout your day.",
                   color: "text-primary",
                 },
                 {
                   icon: Target,
-                  title: "Enhanced Mobility & Flexibility",
-                  desc: "Encourage smoother movement, better range of motion, and improved activity levels.",
+                  title: "Optimized Metabolism",
+                  desc: "Support healthy weight management, hormone balance, and metabolic function naturally.",
                   color: "text-primary",
                 },
                 {
                   icon: Heart,
-                  title: "Posture & Muscular Balance Support",
-                  desc: "Address posture impacts, muscle imbalances, and functional weakness contributing to joint stress.",
+                  title: "Radiant Skin",
+                  desc: "Enhance skin health, reduce fine lines, and restore a youthful glow from within.",
                   color: "text-primary",
                 },
                 {
                   icon: Shield,
-                  title: "Stronger Long-Term Musculoskeletal Health",
-                  desc: "Support joint function, reduce strain, and promote long-term movement well-being.",
+                  title: "Well-Being Support",
+                  desc: "Promote cellular health, reduce inflammation, and support long-term vitality.",
                   color: "text-primary",
                 },
               ].map((item, index) => {
@@ -401,14 +362,14 @@ const JoinPainService = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Treatment Options */}
       <section className="py-20 bg-background-warm">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-semibold font-serif mb-6">
-                Joint Pain Support Options Available
+                Support Options We Offer
               </h2>
             </div>
 
@@ -416,26 +377,32 @@ const JoinPainService = () => {
               {[
                 {
                   icon: Activity,
-                  title: "Cell & Joint Support",
-                  desc: "Approaches designed to help support joint comfort and mobility, focusing on maintaining balanced cell function related to joint areas.",
+                  title: "Cellular Support Approaches",
+                  desc: "Support your body’s natural cell function and regenerative capacity.",
                   color: "text-primary",
                 },
                 {
                   icon: Target,
-                  title: "Comfort-Focused Care",
-                  desc: "General supportive strategies that help individuals manage everyday joint discomfort that may arise from routine activities or lifestyle factors.",
+                  title: "Hormone Health Support",
+                  desc: " Personalized hormone guidance to help support energy, metabolism, and overall well-being.",
                   color: "text-primary",
                 },
                 {
                   icon: Heart,
-                  title: "Lifestyle & Movement Guidance",
-                  desc: "Personalized suggestions on nutrition, gentle movement, posture, and daily habits to help maintain joint ease and support your overall physical function.",
+                  title: "Lifestyle & Wellness Guidance",
+                  desc: " Nutrition, movement, sleep, and stress management tailored to your needs.",
                   color: "text-primary",
                 },
                 {
                   icon: Shield,
-                  title: "Continuous Joint Care",
-                  desc: "Regular follow-ups and observations to help track your joint condition and adjust your support plan according to your needs.",
+                  title: "Continuous Support",
+                  desc: "Regular follow-ups to monitor progress and adjust your cellular therapy program as needed.",
+                  color: "text-primary",
+                },
+                {
+                  icon: Shield,
+                  title: "Custom Plans",
+                  desc: "Each participant receives a personalized roadmap informed by detailed assessments and individual goals.",
                   color: "text-primary",
                 },
               ].map((item, index) => {
@@ -490,9 +457,66 @@ const JoinPainService = () => {
       </section>
 
       {/* Our Process */}
-      <OurProcess />
+      <section className="py-20 bg-background-warm">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-semibold font-serif mb-6">
+                Our Support Process
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                An individualized approach designed to guide your care journey.
+              </p>
+            </div>
 
-      {/* Common Cause of Joint Pain */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { 
+                  icon: UserSearch, 
+                  title: "Consultation", 
+                  desc: "General discussion and review of your health background to understand your goals.",
+                  color: "text-primary"
+                },
+                { 
+                  icon: ClipboardList, 
+                  title: "Custom Plan", 
+                  desc: "A personalized cellular therapy program aligned with your lifestyle and objectives.",
+                  color: "text-primary"
+                },
+                { 
+                  icon: Sparkles, 
+                  title: "Program", 
+                  desc: "Professional, structured service provided in our facility to support your chosen plan.",
+                  color: "text-primary"
+                },
+                { 
+                  icon: HeartPulse, 
+                  title: "Follow-up", 
+                  desc: "Continued check-ins to help monitor your experience and adjust the program as needed.",
+                  color: "text-primary"
+                },
+              ].map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <div 
+                    key={index}
+                    className="bg-white rounded-3xl p-6 text-center shadow-soft hover:shadow-hover transition-all duration-300 hover:-translate-y-1 animate-fade-in"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                      <Icon className={`w-8 h-8 ${item.color}`} />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                    <p className="text-left text-muted-foreground text-sm  leading-relaxed">{item.desc}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
       <section className="py-20 bg-background-warm">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
@@ -509,20 +533,20 @@ const JoinPainService = () => {
               {[
                 {
                   icon: Activity,
-                  title: "Expert Doctors",
-                  desc: "Care guided by experienced doctors specializing in joint pain support and mobility-focused care.",
+                  title: "Experienced Practitioners",
+                  desc: " Our cellular therapy program is guided by skilled professionals.",
                   color: "text-primary",
                 },
                 {
                   icon: Target,
-                  title: "1,000+ joint-care sessions",
-                  desc: "Delivered with consistent, high-quality standards",
+                  title: "Cell-Focused Support",
+                  desc: " Designed to support your body’s natural cellular functions.",
                   color: "text-primary",
                 },
                 {
                   icon: Heart,
-                  title: "Certified Care",
-                  desc: "Individually tailored care plans that enhance joint comfort, movement, and long-term mobility",
+                  title: "Certified & Safe",
+                  desc: " Protocols follow regulated standards for a safe experience.",
                   color: "text-primary",
                 },
               ].map((item, index) => {
@@ -553,4 +577,4 @@ const JoinPainService = () => {
   );
 };
 
-export default JoinPainService;
+export default CellularTherapiesService;

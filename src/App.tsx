@@ -16,6 +16,8 @@ import BlogDetail from "./pages/BlogDetail";
 import Services from "./pages/Services";
 import ServiceDetail from "./pages/JointPainService";
 import JoinPainService from "./pages/JointPainService";
+import CellularTherapiesService from "./pages/CellularTherapiesService";
+import IVNutrientSupportService from "./pages/IVNutrientSupportService";
 
 const queryClient = new QueryClient();
 
@@ -31,8 +33,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/joint-pain-support" element={<JoinPainService />} />
-          <Route path="/services/cellular-therapy" element={<ServiceDetail />} />
-          <Route path="/services/iv-nutrient-support" element={<ServiceDetail />} />
+          <Route path="/services/cellular-therapy" element={<CellularTherapiesService />} />
+          <Route path="/services/iv-nutrient-support" element={<IVNutrientSupportService />} />
           
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
