@@ -30,7 +30,7 @@ const CellularTherapiesService = () => {
     "Experiencing declining energy or mental clarity",
     "Seeking to optimize hormonal and metabolic balance",
     "Looking for a natural, holistic longevity approach",
-    "Wanting to enhance skin health and appearance",
+    "Wanting to improve skin health and appearance.",
     "Ready to age on their own terms with confidence",
   ];
 
@@ -63,7 +63,7 @@ const CellularTherapiesService = () => {
             <p className="text-xl text-muted-foreground mb-8">
               The <b>Age</b> Gracefully. <b>Live</b> Vibrantly. <b>Feel</b> Your Best.
               <br />
-              Experience a regenerative cellular therapy program designed to support longevity, help maintain cell health, and promote overall vitality.
+              Experience a regenerative cellular therapy program designed to support vitality, help maintain cell health, and promote overall vitality.
             </p>
 
             {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6"> */}
@@ -213,10 +213,10 @@ const CellularTherapiesService = () => {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-semibold font-serif mb-6">
-                Our Approach to Longevity & Vitality
+                Our Approach to Vitality
               </h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                We combine cutting-edge health approaches with personalized longevity programs to support healthy aging and overall vitality
+                We combine cutting-edge health approaches with personalized vitality programs to support healthy aging and overall vitality
               </p>
             </div>
 
@@ -324,7 +324,7 @@ const CellularTherapiesService = () => {
                 },
                 {
                   icon: Target,
-                  title: "Optimized Metabolism",
+                  title: "Healthy Metabolism Support",
                   desc: "Support healthy weight management, hormone balance, and metabolic function naturally.",
                   color: "text-primary",
                 },
