@@ -65,9 +65,7 @@ const JoinPainService = () => {
             <p className="text-xl text-muted-foreground mb-8">
               <b>Move</b> Freely. <b>Live</b> Comfortably. <b>Stay</b> Active.
               <br />
-              Experience a holistic, mobility-focused approach designed to
-              support your joints, ease everyday discomfort, and help you stay
-              active at every stage of life
+              Experience a holistic, mobility-focused approach designed to support joint comfort and everyday movement.
             </p>
 
             {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6"> */}
@@ -308,6 +306,73 @@ const JoinPainService = () => {
         </div>
       </section>
 
+      {/* How we can support */}
+      <section className="py-20 bg-background-warm">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-semibold font-serif mb-6">
+                Why Early Support Matters
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+              {[
+                {
+                  icon: CircleCheckBig,
+                  title: "Maintain Healthy Movement",
+                  desc: "Early support helps encourage natural movement patterns before feelings of stiffness or discomfort begin to affect daily activities such as walking, sitting, or lifting.",
+                  color: "text-primary",
+                },
+                {
+                  icon: CircleCheckBig,
+                  title: "Avoid the Inactivity Cycle",
+                  desc: "When joints feel uncomfortable, people move less which creates more tightness. Early support encourages gentle activity that keeps joints moving comfortably.",
+                  color: "text-primary",
+                },
+                {
+                  icon: CircleCheckBig,
+                  title: "Support Independence",
+                  desc: "Small limitations can grow over time. Early support helps maintain everyday functions like climbing stairs, bending, and standing.",
+                  color: "text-primary",
+                },
+                {
+                  icon: CircleCheckBig,
+                  title: "Better Engagement With Supportive Care",
+                  desc: "Movement and lifestyle-based strategies are usually easier and more effective when discomfort is addressed early.",
+                  color: "text-primary",
+                },
+                {
+                  icon: CircleCheckBig,
+                  title: "Support Overall Body Balance",
+                  desc: "When one area becomes stiff, other areas often compensate. Early support helps maintain overall body balance and reduces unnecessary stress on other joints.",
+                  color: "text-primary",
+                },
+              ].map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={index}
+                    className="flex flex-col justify-start items-start  text-center bg-white rounded-3xl p-6 "
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    {/* <div className="w-16 h-16 mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                      <Icon className={`w-8 h-8 ${item.color}`} />
+                    </div> */}
+                    <h3 className="text-xl text-left font-semibold mb-3">
+                      {item.title}
+                    </h3>
+                    <p className="text-left text-muted-foreground text-sm  leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Who this program is for section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
@@ -358,12 +423,12 @@ const JoinPainService = () => {
                 {
                   icon: Activity,
                   title: "Improved Joint Comfort",
-                  desc: "Support reduces tension, stiffness, and everyday joint discomfort.",
+                  desc: "Support encourages ease of movement and daily comfort.",
                   color: "text-primary",
                 },
                 {
                   icon: Target,
-                  title: "Enhanced Mobility & Flexibility",
+                  title: "Promoted Mobility & Flexibility",
                   desc: "Encourage smoother movement, better range of motion, and improved activity levels.",
                   color: "text-primary",
                 },
