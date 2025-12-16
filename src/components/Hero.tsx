@@ -28,7 +28,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto drop-shadow-md">
-            With regenerative therapies, our expert team revitalizes your body for a healthier future
+            Through our well-being focused programs, our expert team provides personalized support to help maintain overall well-being.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">

@@ -17,10 +17,10 @@ const About = () => {
               About Us
             </p>
             <h2 className="text-4xl md:text-5xl font-semibold font-serif text-foreground mb-6">
-              Advanced Regenerative Medicine in Bangkok
+              Personalized Health & Well-Being in Bangkok
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Located at Bangkok Mediplex, Soi Sukhumvit 42, Bangkok, where innovation meets personalized care, the Miracle Regenerative clinic is equipped with the latest advancements in cellular therapy.
+              Located at Bangkok Mediplex, Soi Sukhumvit 42, Bangkok, where innovation meets personalized care, the clinic offers programs designed to support overall well-being.
             </p>
           </div>
 
