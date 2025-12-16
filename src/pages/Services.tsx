@@ -62,7 +62,7 @@ const Services = () => {
               Our Services
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Comprehensive health-support programs designed to enhance your overall balance and vitality.
+              Comprehensive health support programs designed to support overall well-being and daily comfort.
             </p>
           </div>
         </div>
@@ -115,7 +115,7 @@ const Services = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-semibold font-serif mb-6">
-                Why Choose Miracle Regenerative
+                Why Choose <Link to="/">MIRACLE REGENERATIVE CENTER CO., LTD.</Link>
               </h2>
               <p className="text-lg text-muted-foreground">
                 We combine cutting-edge technology with personalized care
