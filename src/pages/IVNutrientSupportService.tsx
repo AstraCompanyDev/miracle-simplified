@@ -280,7 +280,7 @@ const IVNutrientSupportService = () => {
                 {
                   icon: Activity,
                   title: "Improved Vitality",
-                  desc: "Support energy, alertness, and day-to-day performance.",
+                  desc: "Help support daily wellness and comfort",
                   color: "text-primary",
                 },
                 {
@@ -292,7 +292,7 @@ const IVNutrientSupportService = () => {
                 {
                   icon: Heart,
                   title: "Immune Support",
-                  desc: "Strengthen your natural defense system.",
+                  desc: "Helps support overall wellness",
                   color: "text-primary",
                 },
                 {
