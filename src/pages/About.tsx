@@ -20,15 +20,15 @@ const About = () => {
       {/* Hero Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
+          <div className="max-w-5xl mx-auto text-center animate-fade-in-up">
             <p className="text-primary text-sm font-semibold tracking-wider uppercase mb-3">
               About Us
             </p>
             <h1 className="text-5xl md:text-6xl font-semibold font-serif mb-6 text-foreground">
-              Your Regenerative Medicine Clinic
+              Personalized Health & Well-Being in Bangkok
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Located at Bangkok Mediplex, Soi Sukhumvit 42, Bangkok, where innovation meets personalized care, the Miracle Regenerative clinic is equipped with the latest advancements in cellular therapy.
+              Located at Bangkok Mediplex, Soi Sukhumvit 42, Bangkok, where innovation meets personalized care, the clinic offers programs designed to support overall well-being.
             </p>
           </div>
         </div>
@@ -37,7 +37,7 @@ const About = () => {
       {/* Stats Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {stats.map((stat, index) => (
                 <div 

@@ -1,7 +1,10 @@
-import clinicImage from "@/assets/clinic-main-showcase.jpg";
-import bangkokImg from "@/assets/bangkok-clinic.jpg";
-import advancedImg from "@/assets/advanced-clinic.jpg";
-import sereneImg from "@/assets/serene-clinic.jpg";
+import clinicImage from "@/assets//mrc/office.jpeg";
+// import bangkokImg from "@/assets/bangkok-clinic.jpg";
+import bangkokImg from "@/assets/mrc/mrc(1).jpeg";
+// import advancedImg from "@/assets/advanced-clinic.jpg";
+import advancedImg from "@/assets/mrc/mrc(3).jpeg";
+// import sereneImg from "@/assets/serene-clinic.jpg";
+import sereneImg from "@/assets/mrc/mrc(6).jpeg";
 
 const ClinicShowcase = () => {
   return (

@@ -8,7 +8,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Location",
-      details: ["Heart of Bangkok", "Thailand"],
+      details: ["Bangkok Mediplex", "Soi Sukhumvit 42, Bangkok"],
       link: "https://maps.app.goo.gl/oVUtGM6BpNrzVTBSA",
     },
     {

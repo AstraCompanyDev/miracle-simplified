@@ -18,10 +18,10 @@ const Experts = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-2xl shadow-hover">
+              {/* <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-2xl shadow-hover">
                 <div className="text-3xl font-semibold">93%</div>
                 <div className="text-sm font-normal">Success Rate</div>
-              </div>
+              </div> */}
             </div>
 
             {/* Content */}
@@ -30,13 +30,13 @@ const Experts = () => {
                 Meet Our Experts
               </p>
               <h2 className="text-4xl md:text-5xl font-semibold font-serif text-foreground mb-6">
-                Expert and Professional in Regenerative Medicine
+                Experienced and Professional Team in Regenerative Medicine Based Care
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Our team stands at the forefront of regenerative medicine, embodying a commitment to excellence and professionalism in every aspect of our work. With a collective expertise spanning the intricacies of regenerative therapies, our professionals are dedicated to staying abreast of the latest advancements in the field.
+                Our team is committed to professionalism and quality in regenerative medicine based care. With collective experience across various regenerative medicine concepts and approaches, our professionals continuously develop their knowledge and skills to remain informed of ongoing developments in the field.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                We bring a wealth of knowledge to the table, ensuring that our patients receive the highest standard of care. Our expertise lies in delivering cutting-edge solutions that meet the highest standards of quality and safety.
+                We bring a strong foundation of knowledge and experience to support individualized care, with a focus on quality, safety, and appropriate standards of practice.
               </p>
               <Link to={'/contact'}>
                 <Button variant="default" size="lg" className="gap-2">

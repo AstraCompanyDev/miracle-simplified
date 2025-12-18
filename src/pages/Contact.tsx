@@ -13,7 +13,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Location",
-      details: ["Heart of Bangkok", "Thailand"],
+      details: ["Bangkok Mediplex", "Soi Sukhumvit 42, Bangkok"],
       link: "#map-section",
     },
     {

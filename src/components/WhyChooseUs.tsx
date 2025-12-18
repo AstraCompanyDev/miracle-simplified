@@ -6,7 +6,7 @@ const WhyChooseUs = () => {
     {
       icon: Sparkles,
       title: "Cutting-Edge Technology",
-      description: "Latest advancements in cellular therapy and regenerative medicine",
+      description: "Latest developments in cellular therapy based approaches and regenerative medicine concepts",
     },
     {
       icon: Shield,
@@ -21,7 +21,7 @@ const WhyChooseUs = () => {
     {
       icon: Award,
       title: "Proven Results",
-      description: "93% success rate with over 5,800 patients treated",
+      description: "Extensive experience in providing care to a large number of individuals",
     },
   ];
 
@@ -36,10 +36,12 @@ const WhyChooseUs = () => {
                 What We Do
               </p>
               <h2 className="text-4xl md:text-5xl font-semibold font-serif text-foreground mb-6">
-                Empower Your Tomorrow: Lifelong Vitality with Cellular Therapy
+                Empower Your Tomorrow: Supporting Well-Being with Cellular Therapy Based Care
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Our expertise lies in delivering cutting-edge solutions that meet the highest standards of quality and safety. Embrace the future of longevity by harnessing the regenerative capabilities of Cellular Therapy.
+                Our expertise lies in providing advanced, standards-based care that aligns with quality and safety requirements. 
+                <br/>
+                Explore cellular therapy based approaches designed to support overall well-being through individualized care.
               </p>
 
               {/* Benefits Grid */}
