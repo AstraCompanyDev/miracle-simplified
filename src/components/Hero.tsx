@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center text-white animate-fade-in-up">
         <div className="max-w-4xl mx-auto space-y-6">
           <p className="text-accent text-sm font-semibold tracking-wider uppercase animate-fade-in">
-            Bangkok's Premier Regenerative Medicine Clinic
+            Bangkok’s Leading Personalized Health Clinic
           </p>
           
           <h1 className="text-5xl md:text-7xl font-semibold font-serif leading-tight text-white drop-shadow-lg">

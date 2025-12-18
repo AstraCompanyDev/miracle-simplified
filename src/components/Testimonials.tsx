@@ -37,9 +37,9 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className=" bg-white pt-20">  
-    <div className="flex flex-col gap-10 max-w-6xl mx-auto bg-white">  
-    <section className="py-12 bg-background-warm">
+    <div className=" bg-white">  
+    <div className="flex flex-col gap-10 mx-auto bg-white drop-shadow-md">  
+    <section className="py-12 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}

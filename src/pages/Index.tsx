@@ -8,6 +8,7 @@ import TestimonialCarousel from "@/components/TestimonialCarousel";
 import OurProcess from "@/components/OurProcess";
 import OurServices from "@/components/OurServices";
 import RecentPostsCarousel from "@/components/RecentPostsCarousel";
+import Guiding from "@/components/Guiding";
 
 const Index = () => {
   return (
@@ -15,16 +16,19 @@ const Index = () => {
       <Navigation />
       <Hero />
       <About />
-      <Testimonials />
       <OurServices />
+
+      {/* Guiding Section */}
+      <Guiding />
       <OurProcess />
+      <Testimonials />
       <div className="bg-white">
-      <div className="flex flex-col max-w-6xl mx-auto bg-transparent  py-20">
-      <h2 className="text-4xl text-center md:text-5xl font-semibold font-serif">
-        Our Articles
-      </h2>
-      <RecentPostsCarousel currentPostSlug="" />
-      </div>
+        <div className="flex flex-col max-w-6xl mx-auto bg-transparent  py-20">
+          <h2 className="text-4xl text-center md:text-5xl font-semibold font-serif">
+            Our Articles
+          </h2>
+          <RecentPostsCarousel currentPostSlug="" />
+        </div>
       </div>
       <Contact />
       <Footer />
