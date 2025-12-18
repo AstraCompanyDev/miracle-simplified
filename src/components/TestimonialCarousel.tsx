@@ -4,9 +4,9 @@ import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 const testimonials = [
   { name: "Mr Wee", time: "4 months ago", text: "We had cell therapy for a few things and the experience was great. My friend joined me and we were both treated with so much kindness. As the week went on, it was clear how much they genuinely care about their patients.", hasMore: true },
   { name: "Natalie (Natalie)", time: "8 months ago", text: "I had a great experience at MRC. The clinic is modern, clean, and beautifully designed, it immediately made me feel relaxed and taken care of. The staff were welcoming, professional, and very attentive throughout the whole process. You can tell they really care about your well-being and comfort. Highly recommend for anyone looking for quality service in a peaceful, high-end environment. 🙏🏽☺", hasMore: true },
-  { name: "Chutisa", time: "5 months ago", text: "I’ve faced many challenges due to an immune disorder, and a friend recommended MRC Clinic. The team proposed a 7-day plan tailored to my needs. I took a few weeks to decide, and I appreciated that there was no pressure at all. I’m truly grateful to the MRC team for their care and support.", hasMore: true },
-  { name: "Michael Stephineon", time: "7 months ago", text: "I can't say enough good things about this clinic! The team here have been absolutely amazing—professional, compassionate and truly dedicated to helping me with my health needs. The Support Program I've received have made a real difference, I feel like a new man! I’m so grateful for their expertise and support. Highly recommend to anyone looking for top-notch care and great results!", hasMore: true },
-  { name: "Chonlawit Kannares", time: "6 months ago", text: "After trying 3 clinics in Bangkok, I decided to go to MRC to treat my arthritis. Dr. May and the treatments from the lab are revolutionary. I’m super happy with the results!!", hasMore: true, isTranslated: true },
+  { name: "Chutisa", time: "5 months ago", text: "I've faced many challenges due to an immune disorder, and a friend recommended MRC Clinic. The team proposed a 7-day plan tailored to my needs. I took a few weeks to decide, and I appreciated that there was no pressure at all. I'm truly grateful to the MRC team for their care and support.", hasMore: true },
+  { name: "Michael Stephineon", time: "7 months ago", text: "I can't say enough good things about this clinic! The team here have been absolutely amazing—professional, compassionate and truly dedicated to helping me with my health needs. The Support Program I've received have made a real difference, I feel like a new man! I'm so grateful for their expertise and support. Highly recommend to anyone looking for top-notch care and great results!", hasMore: true },
+  { name: "Chonlawit Kannares", time: "6 months ago", text: "After trying 3 clinics in Bangkok, I decided to go to MRC to treat my arthritis. Dr. May and the treatments from the lab are revolutionary. I'm super happy with the results!!", hasMore: true, isTranslated: true },
   { name: "Gerrard Fermin", time: "6 months ago", text: "Aftercare is just as important as the treatment itself, and this clinic gets that. They checked on me days later and answered all my questions. If you have any hesitations with your wellness goal just ask them to achieve your goals.", hasMore: true },
 ];
 
@@ -21,9 +21,10 @@ export default function TestimonialCarousel() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [currentPage, setCurrentPage] = useState(0);
   const [expandedIndices, setExpandedIndices] = useState<Set<number>>(new Set());
-
-  const cardsPerPage = 5;
-  const maxScrollIndex = testimonials.length - cardsPerPage;
+  
+  const cardsPerPage = 3;
+  const totalPages = Math.ceil(testimonials.length / cardsPerPage);
+  const maxScrollIndex = totalPages - 1;
 
   const toggleExpanded = (index: number) => {
     setExpandedIndices(prev => {
@@ -40,8 +41,8 @@ export default function TestimonialCarousel() {
   const updatePage = () => {
     if (scrollRef.current) {
       const scrollLeft = scrollRef.current.scrollLeft;
-      const cardWidth = 192 + 16;
-      const page = Math.min(Math.round(scrollLeft / cardWidth), maxScrollIndex);
+      const containerWidth = scrollRef.current.offsetWidth;
+      const page = Math.min(Math.round(scrollLeft / containerWidth), maxScrollIndex);
       setCurrentPage(page);
     }
   };
@@ -56,22 +57,22 @@ export default function TestimonialCarousel() {
 
   const scrollLeft = () => {
     if (scrollRef.current) {
-      const cardWidth = 192 + 16;
-      scrollRef.current.scrollBy({ left: -cardWidth, behavior: "smooth" });
+      const containerWidth = scrollRef.current.offsetWidth;
+      scrollRef.current.scrollBy({ left: -containerWidth, behavior: "smooth" });
     }
   };
 
   const scrollRight = () => {
     if (scrollRef.current) {
-      const cardWidth = 192 + 16;
-      scrollRef.current.scrollBy({ left: cardWidth, behavior: "smooth" });
+      const containerWidth = scrollRef.current.offsetWidth;
+      scrollRef.current.scrollBy({ left: containerWidth, behavior: "smooth" });
     }
   };
 
   const scrollToPage = (pageIndex: number) => {
     if (scrollRef.current && pageIndex <= maxScrollIndex) {
-      const cardWidth = 192 + 16;
-      scrollRef.current.scrollTo({ left: pageIndex * cardWidth, behavior: "smooth" });
+      const containerWidth = scrollRef.current.offsetWidth;
+      scrollRef.current.scrollTo({ left: pageIndex * containerWidth, behavior: "smooth" });
     }
   };
 
@@ -86,23 +87,17 @@ export default function TestimonialCarousel() {
           >
             <ChevronLeft className="w-6 h-6 text-gray-700" />
           </button>
-
+          
           <div
             ref={scrollRef}
-            className="overflow-x-hidden scroll-smooth"
-            style={{
-              scrollbarWidth: "none",
-              msOverflowStyle: "none",
-              width: "calc(5 * 192px + 4 * 16px)",
-            }}
+            className="overflow-x-hidden scroll-smooth flex-1"
           >
-            <div className="flex gap-4">
+            <div className="flex">
               {testimonials.map((t, idx) => {
                 const isExpanded = expandedIndices.has(idx);
                 const showReadMore = t.hasMore;
-
                 return (
-                  <div key={idx} className="flex-shrink-0 w-48">
+                  <div key={idx} className="flex-shrink-0 px-2" style={{ width: '33.333%' }}>
                     <div className="bg-[#F8F8F8] rounded-3xl shadow-sm border border-gray-200 p-4 h-full hover:shadow-md transition-shadow flex flex-col">
                       {/* Header */}
                       <div className="flex items-start gap-3 mb-3">
@@ -129,14 +124,12 @@ export default function TestimonialCarousel() {
                           </div>
                         </div>
                       </div>
-
                       {/* Stars */}
                       <div className="flex gap-0.5 mb-3">
                         {[...Array(5)].map((_, i) => (
                           <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                         ))}
                       </div>
-
                       {/* Review Text - 3 lines when collapsed */}
                       <p
                         className={`text-sm text-gray-700 leading-relaxed flex-1 ${
@@ -144,9 +137,8 @@ export default function TestimonialCarousel() {
                         }`}
                       >
                         {t.text}
-                        
+                       
                       </p>
-
                       {/* Read More / Less Button */}
                       {showReadMore && (
                         <button
@@ -162,7 +154,7 @@ export default function TestimonialCarousel() {
               })}
             </div>
           </div>
-
+          
           <button
             onClick={scrollRight}
             className="flex-shrink-0 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all"
@@ -171,10 +163,9 @@ export default function TestimonialCarousel() {
             <ChevronRight className="w-6 h-6 text-gray-700" />
           </button>
         </div>
-
         {/* Pagination Dots */}
         <div className="flex justify-center items-center gap-2 mt-6">
-          {[...Array(maxScrollIndex + 1)].map((_, i) => (
+          {[...Array(totalPages)].map((_, i) => (
             <button
               key={i}
               onClick={() => scrollToPage(i)}
