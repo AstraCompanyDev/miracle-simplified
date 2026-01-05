@@ -11,7 +11,7 @@ const Footer = () => {
             <img src={logo} alt="Miracle Regenerative Clinic" className="h-16 w-auto brightness-0 invert" />
           </Link>
           
-          <p className="text-white/75 text-center text-sm max-w-sm">
+          <p className="text-white/75 text-center text-lg max-w-md">
             Specialized cellular therapy clinic in Bangkok offering personalized care for a healthier future.
           </p>
           <p className="text-transparent hover:text-transparent transition-colors">Stem Cell</p>

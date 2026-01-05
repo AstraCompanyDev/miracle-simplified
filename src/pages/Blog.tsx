@@ -54,22 +54,22 @@ const Blog = () => {
           return postCats.includes(selectedCategory);
         });
 
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center text-xl">
-        <div className="animate-spin rounded-full border-b-4 border-r-4 border-r-primary-500 h-8 w-8 mr-4" />
+  // if (loading) {
+  //   return (
+  //     <div className="min-h-screen flex items-center justify-center text-xl">
+  //       <div className="animate-spin rounded-full border-b-4 border-r-4 border-r-primary-500 h-8 w-8 mr-4" />
         
-      </div>
-    );
-  }
+  //     </div>
+  //   );
+  // }
 
-  if (error) {
-    return (
-      <div className="min-h-screen flex items-center justify-center text-xl text-red-500">
-        Error: {error}
-      </div>
-    );
-  }
+  // if (error) {
+  //   return (
+  //     <div className="min-h-screen flex items-center justify-center text-xl text-red-500">
+  //       Error: {error}
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="min-h-screen">
@@ -92,7 +92,13 @@ const Blog = () => {
           </div>
         </div>
       </section>
-
+    {
+      loading ? (
+        <div className="min-h-screen flex items-center justify-center text-xl">
+        <div className="animate-spin rounded-full border-b-4 border-r-4 border-r-primary-500 h-8 w-8 mr-4" />
+      </div>
+      ) :(
+        <div>
       {/* Category Filters */}
       <section className="py-8 bg-background border-b">
         <div className="container mx-auto px-4">
@@ -194,6 +200,15 @@ const Blog = () => {
           </div>
         </div>
       </section>
+    </div>
+      )
+    }
+
+    {error && (
+      <div className="min-h-screen flex items-center justify-center text-xl text-red-500">
+        Error: {error}
+      </div>
+    )}
 
       <Footer />
     </div>

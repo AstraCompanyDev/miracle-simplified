@@ -27,7 +27,7 @@ const About = () => {
             <h1 className="text-5xl md:text-6xl font-semibold font-serif mb-6 text-foreground">
               Personalized Health & Well-Being in Bangkok
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-muted-foreground">
               Located at Bangkok Mediplex, Soi Sukhumvit 42, Bangkok, where innovation meets personalized care, the clinic offers programs designed to support overall well-being.
             </p>
           </div>
@@ -35,7 +35,7 @@ const About = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-background">
+      <section className=" bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
