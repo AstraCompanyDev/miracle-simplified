@@ -17,7 +17,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white animate-fade-in-up">
         <div className="max-w-4xl mx-auto space-y-6 py-2">
-          <p className="inline-block text-black text-xl font-semibold tracking-wider animate-fade-in bg-white p-2 rounded-md">
+          <p className="inline-block text-primary-foreground text-xl font-semibold tracking-wider animate-fade-in p-2 rounded-md">
             Bangkok’s Leading Personalized Health Clinic
           </p>
           
