@@ -45,7 +45,7 @@ const Guiding = () => {
         </div>
       </section>
        {/* Info Grid */}
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
+      <div className="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
         {infoGridImages.map((img, index) => (
           <div className="relative h-64 rounded-2xl overflow-hidden shadow-soft animate-fade-in group cursor-pointer">
           <img 
