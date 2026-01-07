@@ -22,7 +22,7 @@ const OurServices = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 mb-8 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 mb-8 lg:grid-cols-4 gap-6">
               {[
                 { 
                   iconPath: TharapyIcon,
@@ -55,7 +55,7 @@ const OurServices = () => {
                     className="bg-white rounded-3xl p-6 text-center shadow-soft hover:shadow-hover transition-all duration-300 hover:-translate-y-1 animate-fade-in"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="mx-auto w-32 h-32 mb-4 flex items-center justify-center">
+                    <div className="mx-auto w-24 h-24 md:w-32 md:h-32 mb-4 flex items-center justify-center">
                       <img src={item.iconPath} alt={item.title} className={`w-full`} />
                     </div>
                     <h3 className="text-xl font-semibold mb-8">{item.title}</h3>
