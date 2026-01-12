@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { Calendar, Clock, ArrowLeft, MessageCircle, Phone, ClipboardList, Sparkles, Activity, Target, Heart, CircleCheckBig, Shield, UserSearch } from "lucide-react";
 import { Button } from "../components/ui/button";
 import RecentPostsCarousel from "../components/RecentPostsCarousel";
-import heroImage from "@/assets/IV-Nutrient-support.png";
+import heroImage from "@/assets/IV.webp";
 import OurProcess from "@/components/OurProcess";
 import { HeartPulse} from "lucide-react";
 
@@ -44,7 +44,7 @@ const IVNutrientSupportService = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url(${heroImage})`,
-            backgroundPosition: "center 30%", // adjusts focus on faces if needed
+            backgroundPosition: "center 20%", // adjusts focus on faces if needed
           }}
         >
           {/* Light warm overlay - creates soft, golden, elegant feel */}
