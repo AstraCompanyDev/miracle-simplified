@@ -44,7 +44,7 @@ const OurServices = () => {
                   title: "Well-Being", 
                   desc: "Professional care delivery in our state-of-the-art facility",
                   color: "text-primary",
-                  link: "#"
+                  link: "/services"
                 },
                 { 
                   iconPath: PainManagementIcon, 
