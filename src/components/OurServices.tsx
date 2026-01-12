@@ -7,6 +7,7 @@ import WellBeingIcon from '@/assets/Well-being-icon.webp';
 import PainManagementIcon from '@/assets/Pain-Management-icon.webp';
 import { Button } from './ui/button';
 import { Link } from 'react-router-dom';
+import { link } from 'fs';
 
 const OurServices = () => {
   return (
@@ -22,45 +23,51 @@ const OurServices = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 mb-8 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 mb-8 lg:grid-cols-4 md:gap-6 gap-2">
               {[
                 { 
                   iconPath: TharapyIcon,
                   title: "Cell Therapies", 
                   desc: "Comprehensive health assessment and medical history review",
-                  color: "text-primary"
+                  color: "text-primary",
+                  link: "/services/cellular-therapy"
                 },
                 { 
                   iconPath: IVNutrientIcon, 
                   title: "IV Nutrient Support", 
                   desc: "Personalized treatment protocol designed for your unique needs",
-                  color: "text-primary"
+                  color: "text-primary",
+                  link: "/services/iv-nutrient-support"
                 },
                 { 
                   iconPath: WellBeingIcon, 
                   title: "Well-Being", 
                   desc: "Professional care delivery in our state-of-the-art facility",
-                  color: "text-primary"
+                  color: "text-primary",
+                  link: "#"
                 },
                 { 
                   iconPath: PainManagementIcon, 
                   title: "Pain Management", 
                   desc: "Ongoing support, monitoring and progress optimization",
-                  color: "text-primary"
+                  color: "text-primary",
+                  link: "/services/joint-pain-support"
                 },
               ].map((item, index) => {
                 return (
+                  <Link to={item.link} key={index} className="no-underline">
                   <div 
                     key={index}
-                    className="bg-white rounded-3xl p-6 text-center shadow-soft hover:shadow-hover transition-all duration-300 hover:-translate-y-1 animate-fade-in"
+                    className="bg-white rounded-3xl md:p-6 p-3 text-center shadow-soft hover:shadow-hover transition-all duration-300 hover:-translate-y-1 animate-fade-in"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="mx-auto w-24 h-24 md:w-32 md:h-32 mb-4 flex items-center justify-center">
+                    <div className="mx-auto w-20 h-20 md:w-32 md:h-32 mb-4 flex items-center justify-center">
                       <img src={item.iconPath} alt={item.title} className={`w-full`} />
                     </div>
-                    <h3 className="text-xl font-semibold mb-8">{item.title}</h3>
+                    <h3 className="text-sm md:text-xl font-semibold mb-2 md:mb-4">{item.title}</h3>
                     {/* <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p> */}
                   </div>
+                  </Link>
                 );
               })}
             </div>
