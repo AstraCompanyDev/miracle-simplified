@@ -38,15 +38,15 @@ const About = () => {
       <section className=" bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-2 md:gap-8 gap-3">
               {stats.map((stat, index) => (
                 <div 
                   key={index}
-                  className="bg-gradient-card rounded-2xl p-8 text-center shadow-soft hover:shadow-hover transition-all duration-300 hover:-translate-y-2 animate-fade-in"
+                  className="bg-gradient-card rounded-2xl md:p-8 p-2 text-center shadow-soft hover:shadow-hover transition-all duration-300 hover:-translate-y-2 animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-                    <stat.icon className="h-8 w-8 text-primary" />
+                    <stat.icon className="md:h-8 md:w-8 w-6 h-6 text-primary" />
                   </div>
                   <div className="text-4xl font-semibold text-foreground mb-2">{stat.value}</div>
                   <div className="text-muted-foreground font-medium">{stat.label}</div>

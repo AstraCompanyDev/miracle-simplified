@@ -172,7 +172,7 @@ const JoinPainService = () => {
                 {
                   icon: Activity,
                   title: "Arthritis",
-                  desc: "OConditions like osteoarthritis or rheumatoid-related changes can affect joint comfort and mobility.",
+                  desc: "Conditions like osteoarthritis or rheumatoid-related changes can affect joint comfort and mobility.",
                   color: "text-primary",
                 },
                 {
