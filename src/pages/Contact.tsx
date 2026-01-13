@@ -117,7 +117,7 @@ const Contact = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-2 lg:grid-cols-4 md:gap-6 gap-3 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
               {contactInfo.map((info, index) => (
                 <Card
                   key={index}
@@ -134,9 +134,9 @@ const Contact = () => {
                     }
                   }}
                 >
-                  <CardContent className="md:p-6 p-2 text-center">
+                  <CardContent className="p-6 text-center">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-                      <info.icon className="md:h-8 md:w-8 w-6 h-6 text-primary" />
+                      <info.icon className="h-8 w-8 text-primary" />
                     </div>
                     <h3 className="font-semibold text-lg mb-3">{info.title}</h3>
                     {info.link ? (
