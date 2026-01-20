@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Calendar, Clock, ArrowLeft, MessageCircle } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, MessageCircle, ChevronDown } from "lucide-react";
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -15,9 +15,15 @@ type WPPost = {
   title: { rendered: string };
   content: { rendered: string };
   date: string;
-  uagb_featured_image_src?: any;
+  uagb_featured_image_src?: string;
+  additional_featured_image_url: string;
   yoast_head_json?: any;
   _embedded?: any;
+};
+
+type TocItem = {
+  id: string;
+  text: string;
 };
 
 /* -------------------------------- Component -------------------------------- */
@@ -27,6 +33,9 @@ const BlogDetail = () => {
   const [post, setPost] = useState<WPPost | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [tocItems, setTocItems] = useState<TocItem[]>([]);
+  const [activeId, setActiveId] = useState<string>("");
+  const [isTocOpen, setIsTocOpen] = useState(true);
 
   /* ------------------------------- Fetch Post ------------------------------ */
   useEffect(() => {
@@ -55,7 +64,7 @@ const BlogDetail = () => {
 
         setPost(data[0]);
       } catch (err) {
-        if (err instanceof DOMException) return; // request aborted
+        if (err instanceof DOMException) return;
         setError(err instanceof Error ? err.message : "Unexpected error");
       } finally {
         setLoading(false);
@@ -67,11 +76,67 @@ const BlogDetail = () => {
     return () => controller.abort();
   }, [slug]);
 
+  /* ------------------------- Extract TOC from Content ---------------------- */
+  useEffect(() => {
+    if (!post?.content?.rendered) return;
+
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(post.content.rendered, "text/html");
+    const h2Elements = doc.querySelectorAll("h2");
+
+    const items: TocItem[] = [];
+    h2Elements.forEach((h2, index) => {
+      const text = h2.textContent?.trim() || "";
+      if (text) {
+        const id = `heading-${index}`;
+        h2.id = id;
+        items.push({ id, text });
+      }
+    });
+
+    setTocItems(items);
+
+    // Update the content with IDs
+    const contentDiv = document.querySelector(".blog-content");
+    if (contentDiv) {
+      const contentH2s = contentDiv.querySelectorAll("h2");
+      contentH2s.forEach((h2, index) => {
+        h2.id = `heading-${index}`;
+      });
+    }
+  }, [post]);
+
+  /* ----------------------- Intersection Observer for Active TOC ------------ */
+  useEffect(() => {
+    if (tocItems.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: "-100px 0px -80% 0px",
+      }
+    );
+
+    tocItems.forEach(({ id }) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, [tocItems]);
+
   /* ---------------------------- Derived Values ----------------------------- */
   const featuredImage = useMemo(() => {
     if (!post) return FALLBACK_IMAGE;
 
     return (
+      post.additional_featured_image_url ||
       post.uagb_featured_image_src?.full?.[0] ||
       post.yoast_head_json?.og_image?.[0]?.url ||
       post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
@@ -82,6 +147,21 @@ const BlogDetail = () => {
   const categories = useMemo(() => {
     return post?._embedded?.["wp:term"]?.[0]?.map((cat: any) => cat.name) ?? [];
   }, [post]);
+
+  /* ---------------------------- Scroll Handler ----------------------------- */
+  const scrollToHeading = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
 
   /* ---------------------------------- JSX ---------------------------------- */
   return (
@@ -160,15 +240,90 @@ const BlogDetail = () => {
               </div>
             </section>
 
-            {/* Content */}
+            {/* Content with TOC */}
             <section className="py-16">
               <div className="container mx-auto px-4">
-                <div className="max-w-4xl mx-auto prose prose-lg prose-headings:font-serif prose-img:rounded-xl prose-img:shadow-soft">
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: post.content.rendered,
-                    }}
-                  />
+                {/* Mobile TOC - Collapsible (Above Content) */}
+                {tocItems.length > 0 && (
+                  <div className="lg:hidden max-w-4xl mx-auto mb-8">
+                    <button
+                      onClick={() => setIsTocOpen(!isTocOpen)}
+                      className="w-full flex items-center justify-between bg-gray-50 dark:bg-gray-800 rounded-lg px-4 py-3 text-left hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                    >
+                      <span className="font-semibold text-foreground">
+                        Table of Contents
+                      </span>
+                      <ChevronDown
+                        className={`w-5 h-5 transition-transform ${
+                          isTocOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    
+                    {isTocOpen && (
+                      <nav className="mt-2 bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
+                        <ul className="space-y-2 border-l-2 border-gray-200 dark:border-gray-700">
+                          {tocItems.map((item) => (
+                            <li key={item.id}>
+                              <button
+                                onClick={() => {
+                                  scrollToHeading(item.id);
+                                }}
+                                className={`block w-full text-left px-4 py-2 text-sm transition-colors hover:text-primary ${
+                                  activeId === item.id
+                                    ? "text-primary font-medium border-l-2 border-primary -ml-[2px]"
+                                    : "text-muted-foreground"
+                                }`}
+                              >
+                                {item.text}
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      </nav>
+                    )}
+                  </div>
+                )}
+
+                <div className="flex gap-12 max-w-7xl mx-auto relative">
+                  {/* Desktop TOC - Sticky (Left Side) */}
+                  {tocItems.length > 0 && (
+                    <aside className="hidden lg:block w-64 flex-shrink-0">
+                      <div className="sticky top-24">
+                        <h3 className="text-lg font-semibold mb-4 text-foreground">
+                          Table of Contents
+                        </h3>
+                        <nav>
+                          <ul className="space-y-2 border-l-2 border-gray-200">
+                            {tocItems.map((item) => (
+                              <li key={item.id}>
+                                <button
+                                  onClick={() => scrollToHeading(item.id)}
+                                  className={`block w-full text-left px-4 py-2 text-sm transition-colors hover:text-primary ${
+                                    activeId === item.id
+                                      ? "text-primary font-medium border-l-2 border-primary -ml-[2px]"
+                                      : "text-muted-foreground"
+                                  }`}
+                                >
+                                  {item.text}
+                                </button>
+                              </li>
+                            ))}
+                          </ul>
+                        </nav>
+                      </div>
+                    </aside>
+                  )}
+
+                  {/* Main Content */}
+                  <article className="flex-1 max-w-4xl">
+                    <div
+                      className="blog-content prose prose-lg prose-headings:font-serif prose-img:rounded-xl prose-img:shadow-soft prose-h2:scroll-mt-24"
+                      dangerouslySetInnerHTML={{
+                        __html: post.content.rendered,
+                      }}
+                    />
+                  </article>
                 </div>
               </div>
             </section>

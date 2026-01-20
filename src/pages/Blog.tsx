@@ -176,7 +176,7 @@ const Blog = () => {
                         <h3
                           className="text-2xl font-semibold font-serif mb-3 group-hover:text-primary transition-colors"
                           dangerouslySetInnerHTML={{
-                            __html: post.title.rendered,
+                            __html: post?.additional_title_value || post.title.rendered,
                           }}
                         />
 

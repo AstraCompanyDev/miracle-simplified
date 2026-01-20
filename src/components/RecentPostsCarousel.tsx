@@ -148,7 +148,7 @@ const RecentPostsCarousel = ({ currentPostSlug,  }: RecentPostsCarouselProps) =>
                       <div className="p-6">
                         <h3
                           className="text-xl font-serif font-semibold mb-3 line-clamp-2 group-hover:text-primary transition-colors duration-300"
-                          dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+                          dangerouslySetInnerHTML={{ __html: post?.additional_title_value || post.title.rendered }}
                         />
                         <p
                           className="text-muted-foreground text-sm leading-relaxed line-clamp-3 mb-4"

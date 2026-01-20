@@ -70,16 +70,19 @@ All colors MUST be HSL.
 
 
 /* Give all Gutenberg blocks space */
+.blog-content > * {
+  margin-bottom: 1.25rem;
+}
 h2.wp-block-heading {
   font-size: 1.5rem;
 }
 h3.wp-block-heading {
   font-size: 1.25rem;
 }
-.wp-block-heading {
+/* .wp-block-heading {
   margin-top: 2rem;
-  margin-bottom: 1rem;  
-}
+  margin-bottom: 1rem;
+} */
 
 .wp-block-image {
   margin: 2rem 0;
@@ -94,6 +97,7 @@ h3.wp-block-heading {
 .wp-block-list {
   margin: 1.5rem 0;
   margin-left: 1.8rem;
+  list-style-type: disc;
 }
 
 .wp-block-quote {
