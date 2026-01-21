@@ -37,6 +37,9 @@ const BlogDetail = () => {
   const [activeId, setActiveId] = useState<string>("");
   const [isTocOpen, setIsTocOpen] = useState(true);
 
+  const restrictedSlugs = ["what-are-stem-cells-a-simple-guide-to-how-they-work"];
+  const restrictedCategories = ["Regenerative Medicine Education"];
+
   /* ------------------------------- Fetch Post ------------------------------ */
   useEffect(() => {
     if (!slug) return;
@@ -329,7 +332,9 @@ const BlogDetail = () => {
             </section>
 
             {/* CTA */}
-            <section className="py-20 text-center">
+            
+            {
+             !restrictedCategories.some((cat) => categories.includes(cat)) && <section className="py-20 text-center">
               <h2 className="text-3xl md:text-4xl font-serif font-semibold mb-6">
                 Ready to Start Your Journey?
               </h2>
@@ -349,7 +354,8 @@ const BlogDetail = () => {
                 <MessageCircle className="h-6 w-6" />
                 Schedule a Consultation
               </Button>
-            </section>
+            </section> 
+            }
 
             {/* Recent Posts */}
             <h2 className="text-3xl md:text-4xl font-serif font-semibold text-center mb-8">
