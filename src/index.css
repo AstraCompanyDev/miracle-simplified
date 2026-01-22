@@ -73,6 +73,10 @@ All colors MUST be HSL.
 .blog-content > * {
   margin-bottom: 1.25rem;
 }
+.blog-content a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 h2.wp-block-heading {
   font-size: 1.5rem;
 }
