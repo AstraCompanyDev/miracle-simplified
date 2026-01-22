@@ -85,7 +85,7 @@ const Blog = () => {
             <h1 className="text-5xl md:text-6xl font-semibold font-serif mb-6">
               Our Blog
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-muted-foreground ">
               Latest insights on regenerative medicine, wellness, and healthy
               living
             </p>
@@ -100,7 +100,7 @@ const Blog = () => {
       ) :(
         <div>
       {/* Category Filters */}
-      <section className="py-8 bg-background border-b">
+      <section className="pb-8 bg-background border-b">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-wrap gap-3 justify-center">
