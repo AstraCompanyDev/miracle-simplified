@@ -117,7 +117,7 @@ const Contact = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-6 mb-16">
               {contactInfo.map((info, index) => (
                 <Card
                   key={index}
@@ -134,23 +134,23 @@ const Contact = () => {
                     }
                   }}
                 >
-                  <CardContent className="p-6 text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-                      <info.icon className="h-8 w-8 text-primary" />
+                  <CardContent className="p-2 md:p-6 text-center">
+                    <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-full mb-4">
+                      <info.icon className="w-6 h-6 md:h-8 md:w-8 text-primary" />
                     </div>
-                    <h3 className="font-semibold text-lg mb-3">{info.title}</h3>
+                    <h3 className="font-semibold text-md md:text-lg mb-3">{info.title}</h3>
                     {info.link ? (
                       <a
                         href={info.link}
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
                         {info.details.map((detail, idx) => (
-                          <p key={idx}>{detail}</p>
+                          <p className="text-sm md:text-[16px] text-pretty break-words" key={idx}>{detail}</p>
                         ))}
                       </a>
                     ) : (
                       info.details.map((detail, idx) => (
-                        <p key={idx} className="text-muted-foreground">
+                        <p key={idx} className="text-sm md:text-[16px] break-words text-muted-foreground">
                           {detail}
                         </p>
                       ))
