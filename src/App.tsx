@@ -18,6 +18,7 @@ import ServiceDetail from "./pages/JointPainService";
 import JoinPainService from "./pages/JointPainService";
 import CellularTherapiesService from "./pages/CellularTherapiesService";
 import IVNutrientSupportService from "./pages/IVNutrientSupportService";
+import Collaboration from "./pages/Collaboration";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/lee" element={<Landing />} />
+          <Route path="/collaboration" element={<Collaboration />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

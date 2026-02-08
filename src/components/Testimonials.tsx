@@ -38,8 +38,8 @@ const Testimonials = () => {
 
   return (
     <div className=" bg-white">  
-    <div className="flex flex-col gap-10 mx-auto bg-white drop-shadow-md">  
-    <section className="py-12 bg-background">
+    <div className="flex flex-col gap-10 mx-auto bg-background-warm drop-shadow-md">  
+    <section className="pt-12 pb-4">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -47,7 +47,7 @@ const Testimonials = () => {
             <p className="text-primary text-sm font-semibold tracking-wider uppercase mb-3">
               Google Reviews
             </p>
-            <h2 className="text-4xl md:text-5xl font-semibold font-serif text-foreground mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold italic font-serif text-foreground mb-6">
               Hear From Our Patients
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">

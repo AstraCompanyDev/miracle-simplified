@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowRight, ArrowLeft, Star } from "lucide-react";
 import { testimonials } from "@/constants/testimonialsInfo";
 
 
@@ -90,16 +90,16 @@ export default function TestimonialCarousel() {
   const cardWidth = `${100 / cardsPerPage}%`;
 
   return (
-    <section className="py-8 bg-white">
+    <section className="py-10 bg-[#5B4A3A]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex items-center gap-2 sm:gap-4">
           {/* Left Navigation Button - Hidden on mobile if needed */}
           <button
             onClick={scrollLeft}
-            className="hidden sm:flex flex-shrink-0 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full items-center justify-center transition-all"
+            className="hidden sm:flex flex-shrink-0 w-10 h-10 bg-neutral-800 hover:bg-neutral-900 rounded-full items-center justify-center transition-all"
             aria-label="Previous"
           >
-            <ChevronLeft className="w-6 h-6 text-gray-700" />
+            <ArrowLeft className="w-6 h-6 text-white" />
           </button>
          
           <div
@@ -127,7 +127,7 @@ export default function TestimonialCarousel() {
                             <div className="flex items-center gap-1">
                               <div className="font-medium text-sm text-gray-900 truncate">{t.name}</div>
                               <img 
-                                src="/verify.png" 
+                                src="/verify-blue.png" 
                                 alt="Verified" 
                                 width={14} 
                                 height={14} 
@@ -177,7 +177,7 @@ export default function TestimonialCarousel() {
                       {showReadMore && (
                         <button
                           onClick={() => toggleExpanded(idx)}
-                          className="text-xs text-blue-600 hover:underline font-medium mt-2 text-left"
+                          className="text-xs text-[#14B8A6] hover:underline font-medium mt-2 text-left"
                         >
                           {isExpanded ? "Read less" : "Read more"}
                         </button>
@@ -192,10 +192,10 @@ export default function TestimonialCarousel() {
           {/* Right Navigation Button - Hidden on mobile if needed */}
           <button
             onClick={scrollRight}
-            className="hidden sm:flex flex-shrink-0 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full items-center justify-center transition-all"
+            className="hidden sm:flex flex-shrink-0 w-10 h-10 bg-neutral-800 hover:bg-neutral-900 rounded-full items-center justify-center transition-all"
             aria-label="Next"
           >
-            <ChevronRight className="w-6 h-6 text-gray-700" />
+            <ArrowRight className="w-6 h-6 text-white" />
           </button>
         </div>
         
@@ -203,17 +203,17 @@ export default function TestimonialCarousel() {
         <div className="flex justify-center gap-4 mt-4 sm:hidden">
           <button
             onClick={scrollLeft}
-            className="flex-shrink-0 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all"
+            className="flex-shrink-0 w-10 h-10 bg-neutral-800 hover:bg-neutral-900 rounded-full flex items-center justify-center transition-all"
             aria-label="Previous"
           >
-            <ChevronLeft className="w-6 h-6 text-gray-700" />
+            <ArrowLeft className="w-6 h-6 text-white" />
           </button>
           <button
             onClick={scrollRight}
-            className="flex-shrink-0 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all"
+            className="flex-shrink-0 w-10 h-10 bg-neutral-800 hover:bg-neutral-900 rounded-full flex items-center justify-center transition-all"
             aria-label="Next"
           >
-            <ChevronRight className="w-6 h-6 text-gray-700" />
+            <ArrowRight className="w-6 h-6 text-white" />
           </button>
         </div>
         
@@ -224,7 +224,7 @@ export default function TestimonialCarousel() {
               key={i}
               onClick={() => scrollToPage(i)}
               className={`w-2 h-2 rounded-full transition-all ${
-                i === currentPage ? 'bg-gray-800 w-3 h-3' : 'bg-gray-300'
+                i === currentPage ? 'bg-white/80 w-3 h-3' : 'bg-white/60'
               }`}
               aria-label={`Go to slide ${i + 1}`}
             />

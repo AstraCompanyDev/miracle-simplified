@@ -25,7 +25,7 @@ const Contact = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/20">
+    <section className="pt-20 pb-8 bg-muted/20">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto text-center">
           {/* Section Header */}

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import teamImage from "@/assets/team-experts-updated.jpg";
+import teamImage from "@/assets/meet-doctor-expert.webp";
 import { Link } from "react-router-dom";
 
 const Experts = () => {
@@ -15,7 +15,7 @@ const Experts = () => {
                 <img 
                   src={teamImage} 
                   alt="Medical experts at Miracle Regenerative Center"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover aspect-square"
                 />
               </div>
               {/* <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-2xl shadow-hover">

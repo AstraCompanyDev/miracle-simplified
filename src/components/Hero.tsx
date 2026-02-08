@@ -14,6 +14,12 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,hsl(45_70%_60%/0.15)_40%,hsl(14_60%_40%/0.4)_100%)]" />
       </div>
 
+      <p className="absolute bottom-0 right-0 text-sm p-2 text-white hidden md:block">
+            ใบอนุญาตโฆษณาเลขที่อนุมัติ ฆสพ.สบส 7013/2567
+            <br />
+            ใบอนุญาตโฆษณาเลขที่อนุมัติ ฆสพ.สบส 7014/2567
+          </p>
+
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white animate-fade-in-up">
         <div className="max-w-4xl mx-auto space-y-6 py-2">

@@ -1,5 +1,5 @@
 import { Sparkles, Shield, Users, Award } from "lucide-react";
-import activeImage from "@/assets/team-experts-new.jpg";
+import activeImage from "@/assets/old-man-handshake-with-doctor.webp";
 
 const WhyChooseUs = () => {
   const benefits = [
@@ -57,9 +57,9 @@ const WhyChooseUs = () => {
                         <benefit.icon className="h-6 w-6 text-primary" />
                       </div>
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">{benefit.title}</h3>
-                      <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                    <div className="text-black">
+                      <h3 className="font-semibold  mb-1">{benefit.title}</h3>
+                      <p className="text-sm ">{benefit.description}</p>
                     </div>
                   </div>
                 ))}
