@@ -5,23 +5,23 @@ const WhyChooseUs = () => {
   const benefits = [
     {
       icon: Sparkles,
-      title: "Cutting-Edge Technology",
-      description: "Latest developments in cellular therapy based approaches and regenerative medicine concepts",
+      title: "Cutting-Edge Approaches",
+      description: "Current developments in cellular therapy based approaches and regenerative medicine concepts, aligned with quality and safety standards.",
     },
     {
       icon: Shield,
       title: "Safety First",
-      description: "High quality and safety standards",
+      description: "Aligned with quality and safety standards",
     },
     {
       icon: Users,
       title: "Expert Team",
-      description: "Experienced professionals dedicated to your care",
+      description: "Healthcare professionals with clinical experience and defined roles in patient care.",
     },
     {
       icon: Award,
-      title: "Proven Results",
-      description: "Extensive experience in providing care to a large number of individuals",
+      title: "Established Experience",
+      description: "Experience in providing care based on established standards to diverse patient groups.",
     },
   ];
 
@@ -53,13 +53,13 @@ const WhyChooseUs = () => {
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                      <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
                         <benefit.icon className="h-6 w-6 text-primary" />
                       </div>
                     </div>
                     <div className="text-black">
-                      <h3 className="font-semibold  mb-1">{benefit.title}</h3>
-                      <p className="text-sm ">{benefit.description}</p>
+                      <h3 className="font-semibold mb-1">{benefit.title}</h3>
+                      <p className="text-xs ">{benefit.description}</p>
                     </div>
                   </div>
                 ))}

@@ -21,48 +21,37 @@ import img3 from "@/assets/mrc/mrc(3).jpeg";
 import img4 from "@/assets/mrc/mrc(4).jpeg";
 import img5 from "@/assets/mrc/mrc(5).jpeg";
 import img6 from "@/assets/mrc/mrc(6).jpeg";
+import GoogleReviews from "@/components/GoogleReviews";
 
 
 
 const Index = () => {
-  const slides: Slide[] = [
-  {
-    image: img1,
-    alt: 'Medical Facility',
-    // title: 'State-of-the-Art Facility',
-    // description: 'Our modern clinic with advanced equipment'
-  },
-  {
-    image: img2,
-    alt: 'Medical Facility',
-    // title: 'State-of-the-Art Facility',
-    // description: 'Our modern clinic with advanced equipment'
-  },
-  {
-    image: img3,
-    alt: 'Doctor Consultation',
-    // title: 'Expert Consultation',
-    // description: 'Personalized care from experienced specialists'
-  },
-  {
-    image: img4,
-    alt: 'Treatment Room',
-    // title: 'Comfortable Environment',
-    // description: 'Relaxing atmosphere for optimal healing'
-  },
-  {
-    image: img5,
-    alt: 'Treatment Room',
-    // title: 'Comfortable Environment',
-    // description: 'Relaxing atmosphere for optimal healing'
-  },
-  {
-    image: img6,
-    alt: 'Treatment Room',
-    // title: 'Comfortable Environment',
-    // description: 'Relaxing atmosphere for optimal healing'
-  },
-];
+//   const slides: Slide[] = [
+//   {
+//     image: img1,
+//     alt: 'Medical Facility',
+//   },
+//   {
+//     image: img2,
+//     alt: 'Medical Facility',
+//   },
+//   {
+//     image: img3,
+//     alt: 'Doctor Consultation',
+//   },
+//   {
+//     image: img4,
+//     alt: 'Treatment Room',
+//   },
+//   {
+//     image: img5,
+//     alt: 'Treatment Room',
+//   },
+//   {
+//     image: img6,
+//     alt: 'Treatment Room',
+//   },
+// ];
 
   return (
     <div className="min-h-screen">
@@ -76,7 +65,8 @@ const Index = () => {
       {/* <Guiding /> */}
       <OurProcess />
       <Partners />
-      <Testimonials />
+      {/* <Testimonials /> */}
+      <GoogleReviews />
       <div className="bg-white">
         <div className="flex flex-col max-w-6xl mx-auto bg-transparent  py-20">
           <h2 className="text-4xl text-center md:text-5xl font-semibold font-serif">
@@ -87,7 +77,7 @@ const Index = () => {
       </div>
       <Contact />
       
-      <ImageCarousel slides={slides} visibleSlides={3} />
+      {/* <ImageCarousel slides={slides} visibleSlides={3} /> */}
       
       <Footer />
     </div>
