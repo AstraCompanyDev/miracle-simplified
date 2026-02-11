@@ -57,7 +57,7 @@ const WhyChooseUs = () => {
                         <benefit.icon className="h-6 w-6 text-primary" />
                       </div>
                     </div>
-                    <div className="text-black">
+                    <div className="text-muted-foreground">
                       <h3 className="font-semibold mb-1">{benefit.title}</h3>
                       <p className="text-xs ">{benefit.description}</p>
                     </div>

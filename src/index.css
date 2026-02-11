@@ -10,6 +10,8 @@ All colors MUST be HSL.
   :root {
     --background: 67 47% 97%;
     --foreground: 14 9% 28%;
+
+    --background-soft: #f5f0e7;
     
     --background-warm: 41 58% 91%;
 

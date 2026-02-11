@@ -9,7 +9,7 @@ interface Testimonial {
 }
 
 const ANIMATION_DURATION = 500;
-const AUTO_SLIDE_DELAY = 5000;
+const AUTO_SLIDE_DELAY = 7000;
 
 const GoogleReviews = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

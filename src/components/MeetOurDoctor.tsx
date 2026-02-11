@@ -64,14 +64,14 @@ const MeetOurDoctor = () => {
 
   return (
     <section 
-      className="py-12 md:py-20 px-4 sm:px-6 lg:px-8"
-      style={{ backgroundColor: '#f5f0e7' }}
+      className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 bg-background-soft"
+      // style={{ backgroundColor: '#f5f0e7' }}
     >
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-4">
-            Meet Our Doctor
+            Our Doctor
           </h2>
         </div>
 

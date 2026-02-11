@@ -66,7 +66,6 @@ const Index = () => {
 
       {/* Guiding Section */}
       {/* <Guiding /> */}
-      <div className="-mb-20" />
       <OurProcess />
       <Partners />
       {/* <Testimonials /> */}
