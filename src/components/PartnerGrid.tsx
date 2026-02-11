@@ -37,7 +37,7 @@ const partners = [
   },
   { 
     name: "St. Catherine Specialty Hospital", 
-    logo: RejuStemCellLogo,
+    logo: LogoEn,
     description: "St. Catherine Specialty Hospital, founded in 2011, is the largest private hospital in Croatia, a European Center of Excellence, which by using a multidisciplinary approach and the latest equipment provides patients with a variety of treatments."
   },
   { 
@@ -95,11 +95,6 @@ const partners = [
     logo: TrustemLogo,
     description: "Trustem is a healthcare and biotechnology organization specializing in regenerative solutions and advanced therapeutic services designed to support wellness and medical innovation.",
     scale: "scale-[1.3]"
-  },
-  { 
-    name: "Miracle Regenerative Clinic", 
-    logo: LogoEn,
-    description: "Miracle Regenerative Clinic is a regenerative and anti-aging medical facility providing stem cell therapy, exosome infusions, and personalized longevity programs delivered by a clinical team in a modern healthcare setting."
   },
   { 
     name: "Swift Day Surgery", 

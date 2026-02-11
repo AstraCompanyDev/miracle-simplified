@@ -111,7 +111,7 @@ const Partners = () => {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className=" p-2  max-w-full max-h-full object-contain transition-all duration-300"
+                    className="border p-2 border-neutral-200 rounded-md max-w-full max-h-full object-contain grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
                     loading="lazy"
                     draggable={false}
                   />

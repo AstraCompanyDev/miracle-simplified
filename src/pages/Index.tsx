@@ -22,6 +22,7 @@ import img4 from "@/assets/mrc/mrc(4).jpeg";
 import img5 from "@/assets/mrc/mrc(5).jpeg";
 import img6 from "@/assets/mrc/mrc(6).jpeg";
 import GoogleReviews from "@/components/GoogleReviews";
+import ClinicShowcase from "@/components/ClinicShowcase";
 
 
 
@@ -59,10 +60,13 @@ const Index = () => {
       <Hero />
       <About />
       <OurServices />
-      <MeetOurDoctor />
+      <div className="-mb-20" />
+      <ClinicShowcase />
+      {/* <MeetOurDoctor /> */}
 
       {/* Guiding Section */}
       {/* <Guiding /> */}
+      <div className="-mb-20" />
       <OurProcess />
       <Partners />
       {/* <Testimonials /> */}

@@ -56,10 +56,10 @@ const OurProcess = () => {
                     alt={process.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-overlay" />
+                  <div className="absolute inset-0 bg-secondary/80" />
                 </div>
 
-                <div className="relative h-full flex flex-col justify-center items-center text-center p-6 text-white">
+                <div className="relative h-full flex flex-col  items-center text-center p-6 text-white">
                   <div
                     className="p-3 sm:p-3.5 md:p-4 mx-auto mb-4 bg-black/30 rounded-full inline-flex items-center justify-center">
                     <process.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
@@ -68,7 +68,7 @@ const OurProcess = () => {
                   <h3 className="text-xl font-semibold mb-3">
                     {index + 1}. {process.title}
                   </h3>
-                  <p className="text-sm opacity-90">{process.desc}</p>
+                  <p className="text-md opacity-90">{process.desc}</p>
                 </div>
               </div>
             ))}

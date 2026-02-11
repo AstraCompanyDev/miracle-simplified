@@ -4,6 +4,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import Experts from "@/components/Experts";
 import ClinicShowcase from "@/components/ClinicShowcase";
 import { Award, Heart, Sparkles } from "lucide-react";
+import MeetOurDoctor from "@/components/MeetOurDoctor";
 
 const About = () => {
 
@@ -59,6 +60,7 @@ const About = () => {
 
       <WhyChooseUs />
       <ClinicShowcase />
+      <MeetOurDoctor />
       <Experts />
       
       <Footer />
