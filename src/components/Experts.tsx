@@ -10,7 +10,7 @@ const Experts = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
-            <div className="animate-fade-in-up">
+            <div className="order-last md:order-first animate-fade-in-up">
               <p className="text-primary text-sm font-semibold tracking-wider uppercase mb-3">
                 Meet Our Experts
               </p>

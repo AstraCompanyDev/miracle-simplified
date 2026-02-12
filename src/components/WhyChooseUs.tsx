@@ -72,7 +72,7 @@ const WhyChooseUs = () => {
                 <img 
                   src={activeImage} 
                   alt="Active lifestyle with regenerative medicine"
-                  className="w-full h-[600px] object-cover"
+                  className="w-full h-auto lg:h-[600px] object-cover"
                 />
               </div>
             </div>
