@@ -5,7 +5,7 @@ import bangkokImg from "@/assets/mrc/mrc(1).jpeg";
 import advancedImg from "@/assets/mrc/mrc(3).jpeg";
 // import sereneImg from "@/assets/serene-clinic.jpg";
 import sereneImg from "@/assets/mrc/mrc(6).jpeg";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
+import { Carousel, CarouselContent, CarouselDots, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
 import AutoPlay from "embla-carousel-autoplay";
 
 const ClinicShowcase = () => {
@@ -85,7 +85,7 @@ const ClinicShowcase = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-
+          <CarouselDots />
           {/* <CarouselPrevious /> */}
           {/* <CarouselNext /> */}
         </Carousel>
