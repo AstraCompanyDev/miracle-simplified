@@ -248,7 +248,7 @@ const CarouselDots = () => {
     };
   }, [api, onSelect]);
 
-  if (!api) return null;
+  if (!api || scrollSnaps.length < 2) return null;
 
   return (
     <div className="flex justify-center items-center gap-2 mt-6">
