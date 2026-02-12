@@ -20,42 +20,36 @@ import { Link } from "react-router-dom";
 const Services = () => {
   const services = [
     {
-      // icon: Sparkles,
       title: "Joint pain Support",
       description: "Approaches that help ease routine joint discomfort and support comfortable daily movement.",
       image: JointPainImg,
       url: "/services/joint-pain-support"
     },
     {
-      // icon: Heart,
       title: "Cellular Therapies",
       description: "Support designed to help maintain vitality and everyday comfort as you age.",
       image: CellularTherapyImg,
       url: "/services/cellular-therapy"
     },
     {
-      // icon: Shield,
       title: "IV Nutrient Support",
       description: "Hydration-focused support to help maintain daily energy.",
       image: IVNutrientImg,
       url: "/services/iv-nutrient-support"
     },
     {
-      // icon: Shield,
       title: "Skin Aging Support",
       description: "Skin aging is a natural process over time. Supportive care helps maintain skin balance, comfort, and overall appearance.",
       image: SkinAging,
       url: "/services/skin-aging-support"
     },
     {
-      // icon: Shield,
       title: "Immune Balance Support",
       description: "Supportive care to help maintain immune system balance and overall wellness.",
       image: ImmuneBalance,
       url: "/services/immune-balance-support"
     },
     {
-      // icon: Shield,
       title: "Lung Health Support",
       description: "Supportive care to help maintain healthy lung function and respiratory comfort.",
       image: LungHealth,

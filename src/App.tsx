@@ -13,12 +13,15 @@ import RouteTracker from "./components/RouteTracker";
 import Landing from "./pages/Landing";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
-import Services from "./pages/Services";
-import ServiceDetail from "./pages/JointPainService";
-import JoinPainService from "./pages/JointPainService";
-import CellularTherapiesService from "./pages/CellularTherapiesService";
-import IVNutrientSupportService from "./pages/IVNutrientSupportService";
+import Services from "./pages/services/Services";
+import ServiceDetail from "./pages/services/JointPainService";
+import JoinPainService from "./pages/services/JointPainService";
+import CellularTherapiesService from "./pages/services/CellularTherapiesService";
+import IVNutrientSupportService from "./pages/services/IVNutrientSupportService";
 import Collaboration from "./pages/Collaboration";
+import SkinAgingService from "./pages/services/SkinAgingService";
+import ImmuneBalanceService from "./pages/services/ImmuneBalanceService";
+import LungHealthService from "./pages/services/LungHealthService";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +39,9 @@ const App = () => (
           <Route path="/services/joint-pain-support" element={<JoinPainService />} />
           <Route path="/services/cellular-therapy" element={<CellularTherapiesService />} />
           <Route path="/services/iv-nutrient-support" element={<IVNutrientSupportService />} />
+          <Route path="/services/skin-aging-support" element={<SkinAgingService />} />
+          <Route path="/services/immune-balance-support" element={<ImmuneBalanceService />} />
+          <Route path="/services/lung-health-support" element={<LungHealthService />} />
           
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
