@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { Calendar, Clock, ArrowLeft, MessageCircle, Phone, ClipboardList, Sparkles, Activity, Target, Heart, CircleCheckBig, Shield } from "lucide-react";
 import { Button } from "../components/ui/button";
 import RecentPostsCarousel from "../components/RecentPostsCarousel";
-import heroImage from "@/assets/joint-pain.webp";
+import heroImage from "@/assets/services/joint-pain.webp";
 import OurProcess from "@/components/OurProcess";
 import { HeartPulse} from "lucide-react";
 
