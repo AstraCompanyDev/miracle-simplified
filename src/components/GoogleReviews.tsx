@@ -6,6 +6,7 @@ interface Testimonial {
   text: string;
   rating: number;
   initial?: string;
+  color?: string;
 }
 
 const ANIMATION_DURATION = 500;
@@ -23,36 +24,42 @@ const GoogleReviews = () => {
       text: "Cellular therapy really changed my life! I was struggling with joint pain, but now I feel incredible - more power, no pain, and improved mobility. Thank you, guys!",
       rating: 5,
       initial: "L",
+      color: "#14B8A6",
     },
     {
       name: "Mark T.",
       text: "I can only say Immunotherapy made me forget about my hip issues. No more pain! Thanks to Miracle Regen, I can enjoy life again!",
       rating: 5,
       initial: "M",
+      color: "#F97316",
     },
     {
       name: "Kevin D.",
       text: "Amazing treatment, I wish I would have known before! The performance issues I had are gone. Highly recommend their ED program!",
       rating: 5,
       initial: "K",
+      color: "#EC4899",
     },
     {
       name: "Shareen P.",
       text: "The Cell therapy boosted my energy, reduced inflammation, and improved my muscle and cartilage. I feel amazing!",
       rating: 5,
       initial: "S",
+      color: "#EF4444",
     },
     {
       name: "Daniel J.",
       text: "It's incredible! Immunotherapy really helped with my knee osteoarthritis and now the pain is completely gone.",
       rating: 5,
       initial: "D",
+      color: "#EC4899",
     },
     {
       name: "Anjali T.",
       text: "My diabetes was keeping me awake at night with worry. After this life-changing treatment I don't have to worry any more!",
       rating: 5,
       initial: "A",
+      color: "#F97316",
     },
   ];
 
@@ -140,9 +147,10 @@ const GoogleReviews = () => {
           {/* Avatar */}
           <div className="flex justify-center -mb-14">
             <div
-              className={`w-32 h-32 rounded-full bg-[#5DB5BA] flex items-center justify-center border-4 border-secondary shadow-xl
+              className={`w-32 h-32 rounded-full flex items-center justify-center border-4 border-secondary shadow-xl
                 transform-gpu transition-all duration-500 ease-out
                 ${isAnimating ? 'opacity-0 scale-90' : 'opacity-100 scale-100'}`}
+                style={{ backgroundColor: testimonials[currentIndex].color || '#000' }}
             >
               <span className="text-white text-6xl font-semibold">
                 {testimonials[currentIndex].initial}
