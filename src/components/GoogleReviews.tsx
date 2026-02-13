@@ -150,7 +150,7 @@ const GoogleReviews = () => {
               className={`w-32 h-32 rounded-full flex items-center justify-center border-4 border-secondary shadow-xl
                 transform-gpu transition-all duration-500 ease-out
                 ${isAnimating ? 'opacity-0 scale-90' : 'opacity-100 scale-100'}`}
-                style={{ backgroundColor: testimonials[currentIndex].color || '#000' }}
+                style={{ backgroundColor: testimonials[currentIndex].color || '#4E4441' }}
             >
               <span className="text-white text-6xl font-semibold">
                 {testimonials[currentIndex].initial}
