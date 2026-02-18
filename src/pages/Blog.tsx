@@ -5,6 +5,39 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Clock, ArrowRight, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 
+interface WPTerm {
+  id: number;
+  name: string;
+  slug: string;
+}
+
+interface WPFeaturedMedia {
+  source_url: string;
+}
+
+interface WPPost {
+  id: number;
+  date: string;
+  slug: string;
+  title: {
+    rendered: string;
+  };
+  excerpt: {
+    rendered: string;
+  };
+  additional_title_value?: string;
+  uagb_featured_image_src?: {
+    full?: string[];
+  };
+  yoast_head_json?: {
+    og_image?: { url: string }[];
+  };
+  _embedded?: {
+    "wp:term"?: WPTerm[][];
+    "wp:featuredmedia"?: WPFeaturedMedia[];
+  };
+}
+
 const WP_API = "https://miracleregen.com/wp-json/wp/v2";
 const POSTS_PER_PAGE = 6;
 
@@ -12,7 +45,7 @@ const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState("All Posts");
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [posts, setPosts] = useState<any[]>([]);
+  const [posts, setPosts] = useState<WPPost[]>([]);
   const [categories, setCategories] = useState<string[]>(["All Posts"]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -23,14 +56,14 @@ const Blog = () => {
       try {
         const res = await fetch(`${WP_API}/posts?_embed&per_page=100`);
         if (!res.ok) throw new Error("Failed to load posts");
-        const data = await res.json();
+        const data: WPPost[] = await res.json();
 
         // Extract dynamic categories
         const allCats = Array.from(
           new Set(
             data
-              .flatMap((p: any) =>
-                p._embedded?.["wp:term"]?.[0]?.map((c: any) => c.name)
+              .flatMap((p: WPPost) =>
+                p._embedded?.["wp:term"]?.[0]?.map((c) => c.name)
               )
               .filter(Boolean)
           )
@@ -38,8 +71,12 @@ const Blog = () => {
 
         setCategories(["All Posts", ...allCats]);
         setPosts(data);
-      } catch (err: any) {
-        setError(err.message);
+      } catch (err) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError("Something went wrong");
+        }
       } finally {
         setLoading(false);
       }
@@ -57,7 +94,7 @@ const Blog = () => {
     .filter((post) => {
       if (selectedCategory === "All Posts") return true;
       const postCats =
-        post._embedded?.["wp:term"]?.[0]?.map((c: any) => c.name) || [];
+        post._embedded?.["wp:term"]?.[0]?.map((c: WPTerm) => c.name) || [];
       return postCats.includes(selectedCategory);
     })
     .filter((post) => {
@@ -210,7 +247,7 @@ const Blog = () => {
                               <p
                                 className="text-muted-foreground mb-4 leading-relaxed"
                                 dangerouslySetInnerHTML={{
-                                  __html: post.excerpt.rendered,
+                                  __html: post.excerpt?.rendered ?? "",
                                 }}
                               />
 

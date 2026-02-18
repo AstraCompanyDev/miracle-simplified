@@ -126,7 +126,7 @@ const GoogleReviews = () => {
               Hear From Our Patients
             </h2>
             <p className="text-white/90 text-lg max-w-3xl mx-auto">
-              Explore verified Google Reviews to learn how others felt about their visit and overall experience with our services.
+              Explore verified Google Reviews to learn how others felt about their visit and overall experience with our services.
             </p>
           </div>
 
