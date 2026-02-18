@@ -16,8 +16,6 @@ const Hero = () => {
 
       <p className="absolute bottom-0 right-0 text-sm p-2 text-white hidden md:block">
             ใบอนุญาตโฆษณาเลขที่อนุมัติ ฆสพ.สบส 7013/2567
-            <br />
-            ใบอนุญาตโฆษณาเลขที่อนุมัติ ฆสพ.สบส 7014/2567
           </p>
 
       {/* Content */}
