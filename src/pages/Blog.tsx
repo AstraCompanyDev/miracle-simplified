@@ -158,27 +158,44 @@ const Blog = () => {
       ) : (
         <div>
           {/* Category Filters */}
-          <section className="pb-8 bg-background border-b">
-            <div className="container mx-auto px-4">
-              <div className="max-w-6xl mx-auto">
-                <div className="flex flex-wrap gap-3 justify-center">
-                  {categories.map((category, i) => (
-                    <button
-                      key={i}
-                      onClick={() => setSelectedCategory(category)}
-                      className={`px-6 py-2 rounded-full font-medium transition-all ${
-                        selectedCategory === category
-                          ? "bg-primary text-white shadow-soft"
-                          : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
-                      }`}
-                    >
-                      {category}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
+<section className="pb-8 bg-background border-b">
+  <div className="container mx-auto px-4">
+    <div className="flex flex-wrap justify-center items-center flex-col md:flex-row gap-3 max-w-6xl mx-auto">
+      {/* First row - All Posts only */}
+      <div className="flex justify-center">
+        <button
+          onClick={() => setSelectedCategory("All Posts")}
+          className={`px-6 py-2 text-sm md:text-base rounded-full font-medium transition-all ${
+            selectedCategory === "All Posts"
+              ? "bg-primary text-white shadow-soft"
+              : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
+          }`}
+        >
+          All Posts
+        </button>
+      </div>
+      
+      {/* Second row - Other categories in flex wrap */}
+      <div className="flex flex-wrap justify-center gap-3">
+        {categories
+          .filter(category => category !== "All Posts")
+          .map((category, i) => (
+            <button
+              key={i}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-2 md:px-6 py-2 text-sm md:text-base rounded-full font-medium transition-all ${
+                selectedCategory === category
+                  ? "bg-primary text-white shadow-soft"
+                  : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+      </div>
+    </div>
+  </div>
+</section>
 
           {/* Blog Grid */}
           <section className="py-20 bg-background">
@@ -189,7 +206,7 @@ const Blog = () => {
                     No posts found{searchQuery ? ` for "${searchQuery}"` : ""}.
                   </div>
                 ) : (
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-8">
                     {paginatedPosts.map((post, index) => {
                       const featuredImage =
                         post.uagb_featured_image_src?.full?.[0] ||
@@ -207,7 +224,7 @@ const Blog = () => {
                             className="group h-full flex flex-col overflow-hidden border-0 shadow-soft hover:shadow-hover transition-all duration-300 hover:-translate-y-2 cursor-pointer animate-fade-in"
                             style={{ animationDelay: `${index * 0.1}s` }}
                           >
-                            <div className="relative aspect-[560/288] overflow-hidden">
+                            <div className="relative aspect-[5/3] md:aspect-[560/288] overflow-hidden">
                               <img
                                 src={featuredImage}
                                 alt={post.title.rendered}
@@ -217,15 +234,15 @@ const Blog = () => {
                                     "https://placehold.co/600x400?text=Placeholder";
                                 }}
                               />
-                              <div className="absolute top-4 left-4">
-                                <span className="bg-primary text-white px-4 py-1 rounded-full text-sm font-medium">
+                              <div className="absolute top-2 md:top-4 left-2 md:left-4">
+                                <span className="bg-primary text-white px-2 md:px-4 py-1 rounded-full text-[10px] md:text-sm font-medium">
                                   {category}
                                 </span>
                               </div>
                             </div>
 
-                            <CardContent className="p-6">
-                              <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                            <CardContent className="p-2 md:p-6">
+                              <div className="flex items-center gap-2 md:gap-4 text-xs md:text-sm text-muted-foreground mb-3">
                                 <div className="flex items-center gap-1">
                                   <Calendar className="h-4 w-4" />
                                   {new Date(post.date).toLocaleDateString()}
@@ -236,7 +253,7 @@ const Blog = () => {
                               </div>
 
                               <h3
-                                className="text-2xl font-semibold font-serif mb-3 group-hover:text-primary transition-colors"
+                                className="text-xl md:text-2xl font-semibold font-serif mb-3 group-hover:text-primary transition-colors"
                                 dangerouslySetInnerHTML={{
                                   __html:
                                     post?.additional_title_value ||
@@ -245,7 +262,7 @@ const Blog = () => {
                               />
 
                               <p
-                                className="text-muted-foreground mb-4 leading-relaxed"
+                                className="hidden md:block text-muted-foreground mb-4 leading-relaxed"
                                 dangerouslySetInnerHTML={{
                                   __html: post.excerpt?.rendered ?? "",
                                 }}

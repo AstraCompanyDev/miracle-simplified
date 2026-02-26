@@ -91,7 +91,7 @@ const Services = () => {
       <section className="pb-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-8">
               {services.map((service, index) => (
                 <Link to={service.url} key={index} className="no-underline">
                 <Card 
@@ -99,7 +99,7 @@ const Services = () => {
                   className="h-full overflow-hidden border-0 shadow-soft hover:shadow-hover transition-all duration-300 hover:-translate-y-2 animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="relative h-64 overflow-hidden">
+                  <div className="relative h-40 md:h-64 overflow-hidden">
                     <img 
                       src={service.image} 
                       alt={service.title}
@@ -110,7 +110,7 @@ const Services = () => {
                     {/* <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                       <service.icon className="h-6 w-6 text-primary" />
                     </div> */}
-                    <h3 className="text-2xl font-semibold font-serif mb-3">
+                    <h3 className="text-xl md:text-2xl font-semibold font-serif mb-3">
                       {service.title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
